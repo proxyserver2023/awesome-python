@@ -216,4 +216,50 @@ file_obj = open(file_name, "<mode>")
 | "ab+"         | Read and append in binary format. Overwrites existing file or creates a new file. |
 
 
+## Dictionaries
+Key should be Immutable [Strings, Numbers]. Mutable things such as lists are not allowed.
+```python
+d = {} # Empty Dict
+tel = {'jack': 4098, 'sape': 4139}
+tel['guido'] = 4127
+del tel['sape']
 
+list(tel) # Listing Dict Keys in insertion order if you want it sorted just use sorted(d)
+```
+
+The dict() constructor builds dictionaries directly from sequences of key-value pairs:
+```python
+dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+```
+
+dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:
+```python
+{x: x**2 for x in (2, 4, 6)}
+```
+
+When the keys are simple strings, it is sometimes easier to specify pairs using keyword arguements:
+```python
+dict(sape=4139, guido=4127, jack=4098)
+```
+
+When looping through dictionaries, the key and corresponding value can be retrieved at the same time using the items() method.
+```python
+knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+for k, v in knights.items():
+    print(k, v)
+```
+
+When looping through a sequence, the position index and corresponding value can be retrieved at the same time using the enumerate() function.
+```python
+for i, v in enumerate(['tic', 'tac', 'toe']):
+    print(i, v)
+```
+
+To loop over two or more sequences at the same time, the entries can be paired with the zip() function.
+```python
+questions = ['name', 'quest', 'favourite color'  ]
+answers   = ['lancelot', 'the holy grail', 'blue']
+
+for q, a in zip(questions, answers):
+    print("What is your {0}? It is {1}.".format(q,a))
+```
