@@ -2,57 +2,6 @@
 #+DESCRIPTION: Quick Reference for this ever-forgetting mind.
 
 * CheatSheet
-
-print and type checking
-
-
-
-
-## Beginner
-### Print and type
-```python
-print("Hello World")
-type("Hello World") #Outputs: <class 'str'>
-```
-
-### Variables
-```python
-# Number
-my_number = 2
-# Float
-my_float_number = 2.023424234
-
-```
-
-2. Functions
-3. Classes
-4. Exceptions
-5. Packages/Modules
-## Advanced
-6. List Comprehensions
-7. Decorators
-8. Context Managers
-9. Generators
-10. Class Decorators
-11. MetaClasses
-## Concurrency
-12. Threading
-13. Multiprocessing
-14. Async
-15. Tulip
-16. Twisted
-17. Gevent
-## Testing
-18. Tox
-19. PyTest
-20. CoveragePy
-## Web
-21. HTTP
-22. Pyramid
-23. Django
-24. Flask
-## DB
-25. Django ORM
 ** Lists
 #+BEGIN_SRC python
   # create a list
