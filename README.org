@@ -84,11 +84,16 @@ Namespaces are one honking great idea -- let's do more of those!
   for bike in bikes:
       print(bike)
 
-  # Adding items to a list
+
   bikes = []
+  # Adding items to a list at the end
   bikes.append('trek')
-  bikes.append('redline')
-  bikes.append('giant')
+  # Adding items to a specific index
+  bikes.insert(<index_position>, <index_value>)
+  # Get item from a specific index
+  bikes.index(<index_position>)
+  # Remove all occurances of a particular value
+  bikes.remove(<value_to_be_removed>)
 
   # Making numerical Lists
   squares = []
