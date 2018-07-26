@@ -5,7 +5,7 @@ Notes that I tend to forget all the time and search on the internet
 
 * CheatSheet
 
-** Rules
+** rules
 #+BEGIN_SRC python
 """
 Beautiful is better than ugly.
@@ -30,7 +30,7 @@ Namespaces are one honking great idea -- let's do more of those!
 """
 #+END_SRC
 
-** Lists
+** lists
 #+BEGIN_SRC python
   # create a list
   bikes = ['trek', 
@@ -87,3 +87,9 @@ Namespaces are one honking great idea -- let's do more of those!
   a[-3::-1]  # everything except the last two items, reversed
 #+END_SRC
 
+** tuples
+#+BEGIN_SRC python
+## Creating a tuple
+dimensions = (1920, 1080)
+#+END_SRC
+* Design Patterns
