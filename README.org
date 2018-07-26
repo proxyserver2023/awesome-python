@@ -4,7 +4,6 @@
 Notes that I tend to forget all the time and search on the internet
 
 * CheatSheet
-
 ** rules
 #+BEGIN_SRC python
 """
@@ -28,6 +27,26 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 """
+#+END_SRC
+
+** operators
+#+BEGIN_SRC python
+5 +  5   # + => addition
+6 -  2   # - => subtraction
+1 *  2   # * => multiplication
+5 /  2   # / => division with floating point ## output:: 2.5
+5 // 2   # // => division without integer flooring the float value ## output :: 2
+2 ** 3   # exponent
+5 %  2   # modulus
+5 >  2   # greater than op
+5 <  2   # less than op
+5 >= 2   # greater than equal
+5 <= 2   # lesser than equal
+5 == 5   # returns true if equal else false
+5 is 5   # returns true if equal else false
+10 != 5  # returns true if not equal
+10 is not 5 # returns true if not equal
+1 in [3, 4, 5, 6] # returns true if 1 is in the collection
 #+END_SRC
 
 ** lists
@@ -92,4 +111,6 @@ Namespaces are one honking great idea -- let's do more of those!
 ## Creating a tuple
 dimensions = (1920, 1080)
 #+END_SRC
+
+
 * Design Patterns
