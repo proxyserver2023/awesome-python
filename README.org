@@ -1,4 +1,7 @@
 #+TITLE: My Awesome Python Handbook
+#+AUTHOR: Muhammad Alamin Khan
+#+EMAIL: alamin.ineedahelp@gmail.com
+#+STARTUP: overview indent inlineimages hideblocks
 #+DESCRIPTION: Quick Reference for this ever-forgetting mind.
 
 Notes that I tend to forget all the time and search on the internet
@@ -171,3 +174,14 @@ sys.argv[4] => fourth_arg  => --h
 """
 #+END_SRC
 
+** os
+#+BEGIN_SRC python
+  """
+  os.name    -> `posix` or `nt`
+  os.curdir  -> .
+  os.pardir  -> ..
+  os.sep     -> '/' or '\'
+  os.linesep -> '\r' or '\n' or '\r\n'
+  os.devnull -> '/dev/null', etc
+  """
+#+END_SRC
