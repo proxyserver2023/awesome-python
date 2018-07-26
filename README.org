@@ -1,6 +1,8 @@
 #+TITLE: My Awesome Python Handbook
 #+DESCRIPTION: Quick Reference for this ever-forgetting mind.
 
+Notes that I tend to forget all the time and search on the internet
+
 * CheatSheet
 ** Lists
 #+BEGIN_SRC python
