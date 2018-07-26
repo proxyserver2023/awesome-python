@@ -3,7 +3,7 @@
 
 Notes that I tend to forget all the time and search on the internet
 
-* CheatSheet
+* CHEATSHEET
 ** rules
 #+BEGIN_SRC python
 """
@@ -129,4 +129,3 @@ dimensions = (1920, 1080)
 #+END_SRC
 
 
-* Design Patterns
