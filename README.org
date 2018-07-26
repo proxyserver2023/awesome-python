@@ -29,6 +29,17 @@ Namespaces are one honking great idea -- let's do more of those!
 """
 #+END_SRC
 
+** variable types
+| Variable Type | Description                            | Casting | Examples                |
+|---------------+----------------------------------------+---------+-------------------------|
+| int           | whole number                           | int()   | 5, -11, 0               |
+| float         | float number                           | float() | 9.57, -0.256, 1.0       |
+| string        | ordered, immutable character container | str()   | "this is a string"      |
+| list          | ordered, mutable container             | list()  | [1, 2.0, "hi"]          |
+| dictionary    | unordered, mutable, associative array  | dict()  | {"k1": "v1", "k2":"v2"  |
+| tuple         | ordered, immutable                     | tuple() | (4, 9), ("word1", "w2") |
+| set           | immutable, ordered                     | set()   | {1, 2, 3, "hello"}      |
+|---------------+----------------------------------------+---------+-------------------------|
 ** operators
 #+BEGIN_SRC python
 5 +  5   # + => addition
