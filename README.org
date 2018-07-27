@@ -281,9 +281,6 @@ print(volume.cube_volume(12))
 
 #+END_SRC
 
-The Module to be recognized as package should have __path__ attribute
-*Some Examples*:
-
 [[./images/modules_and_packages/001.png]]
 [[./images/modules_and_packages/002.jpg]]
 [[./images/modules_and_packages/003.png]]
@@ -291,6 +288,8 @@ The Module to be recognized as package should have __path__ attribute
 [[./images/modules_and_packages/005.png]]
 [[./images/modules_and_packages/006.png]]
 [[./images/modules_and_packages/007.png]]
+
+The Module to be recognized as package should have __path__ attribute
 *** Locating Modules
 at the time of import; python interpreter searches for the module in the following 
 1. pwd
