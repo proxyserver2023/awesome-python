@@ -211,6 +211,91 @@ __nonzero__(self)
 """
 #+END_SRC
 
+** modules and packages
+*** Modules
+<file-name>.py contains definitions, functions, classes and statements
+#+BEGIN_SRC python
+
+  ##########################
+  # Example: area.py
+  ##########################
+  import math
+
+  def circle_area(radius):
+      return math.pi * (radius**2)
+
+  def square_area(x):
+      return x*x
+
+  def rectangle_area(x, y):
+      return x*y
+  ##########################
+
+  ##########################
+  # Example: using area.py
+  ##########################
+  import area
+  print(area.circle_area(50)
+  print(area.square_area(10)
+  print(area.rectangle_area(10, 20)
+
+  # you can use selective definitions
+  from area import circle_area
+  print(circle_area(50))
+
+  # you can import everything by *
+  from area import *
+  print(circle_area(50))
+  print(square_area(10))
+  pritn(rectangle_area(10, 20))
+  ##########################
+
+#+END_SRC
+
+`__name__` is set to `__main__` when the module is run as standalone program.
+run script as stand-alone program
+#+BEGIN_SRC python
+  if __name__ == '__main__':
+      print('Do Something')
+#+END_SRC
+*** packages 
+dir of python modules
+#+BEGIN_SRC python
+
+####################
+# package structure
+####################
+"""
+geometry (package)
+>>> __init__.py
+>>> area.py (module)
+>>> volume.py (module)
+"""
+
+####################
+# package structure
+####################
+from geometry import area, volume
+print(area.circle_area(5))
+print(volume.cube_volume(12))
+
+#+END_SRC
+
+The Module to be recognized as package should have __path__ attribute
+
+*Some Examples*:
+[[./images/modules_and_packages/001.png]]
+[[./images/modules_and_packages/002.jpg]]
+[[./images/modules_and_packages/003.png]]
+[[./images/modules_and_packages/004.png]]
+[[./images/modules_and_packages/005.png]]
+[[./images/modules_and_packages/006.png]]
+[[./images/modules_and_packages/007.png]]
+*** Locating Modules
+at the time of import; python interpreter searches for the module in the following 
+1. pwd
+2. each dir in the `PYTHONPATH`
+3. default path - on unix `/usr/local/lib/python`
 * Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
 
