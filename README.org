@@ -290,6 +290,28 @@ at the time of import; python interpreter searches for the module in the followi
 
 *More Examples*: [[./modules_and_packages.org][Modules and Packages]]
 
+* QUICK REFERENCE
+** Reading and writing files
+1. [[./csv.org][csv]]
+2. xml
+3. xlrd
+4. python-docx
+5. zipfile
+6. json
+7. os
+** Data visualizations
+*** matplotlib
+*** bokeh
+*** pillow
+** Data Analysis
+*** pandas
+*** numpy
+*** scipy
+*** scikit-learn
+** Interacting with the web
+*** urllib
+*** beautiful soup
+*** bottle
 * Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
 
