@@ -290,6 +290,69 @@ at the time of import; python interpreter searches for the module in the followi
 
 *More Examples*: [[./modules_and_packages.org][Modules and Packages]]
 
+*** make a python package that can be installed via pip
+[[https://cdn-images-1.medium.com/max/800/0*zrsAvhx93sdgE9wV.]]
+
+1. create a module
+#+BEGIN_SRC python
+# file: duplicate.py
+import collections
+def get_duplicate(mylist):
+    return [item for item, count in  collections.Counter(mylist).items() if count > 1]
+#+END_SRC
+2. make a python package
+#+BEGIN_SRC python
+file: __init__.py
+#+END_SRC
+3. make a distribution
+create setup.py
+setup.py contains *metadata* about your modules
+#+BEGIN_SRC python
+  from setuptools import setup, find_packages
+
+  setup(
+      name='detect-duplicate', # write your own package name here
+      packages=find_packages(),
+      version='1.1.1',
+      description='Detect duplicate elements in a list',
+      author='Alamin Khan',
+      author_email="alamin@khan.com",
+      url='https://github.com/alaminkhan/detect-duplicate',
+      keywords=['detect duplicate', 'find duplicate', 'list'], # arbitrary keywords
+      license='MIT',
+      classifiers=[],
+      install_requirs=[]
+  )
+#+END_SRC
+
+goto the first-pakcage folder
+#+BEGIN_SRC shell
+python3 setup.py sdist
+#+END_SRC
+
+install your distribution into your local copy of python
+#+BEGIN_SRC shell
+python3 setup.py install
+#+END_SRC
+
+4. Registering with pypi
+5. upload your code
+
+#+BEGIN_SRC shell
+python3 setup.py register
+#+END_SRC
+
+finally upload the dist
+#+BEGIN_SRC shell
+python3 setup.py sdist upload
+#+END_SRC
+
+after that just install
+
+#+BEGIN_SRC shell
+pip install <yourpackagename>
+#+END_SRC
+
 * QUICK REFERENCE
 ** Reading and writing files
 1. [[./csv.org][csv]]
