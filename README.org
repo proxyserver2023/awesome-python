@@ -212,6 +212,7 @@ __nonzero__(self)
 #+END_SRC
 
 ** modules and packages
+[[./images/modules_and_packages/Python-packages-.gif]]
 *** Modules
 <file-name>.py contains definitions, functions, classes and statements
 #+BEGIN_SRC python
@@ -291,7 +292,7 @@ at the time of import; python interpreter searches for the module in the followi
 *More Examples*: [[./modules_and_packages.org][Modules and Packages]]
 
 *** make a python package that can be installed via pip
-[[https://cdn-images-1.medium.com/max/800/0*zrsAvhx93sdgE9wV.]]
+[[./images/modules_and_packages/module_structure.png]]
 
 1. create a module
 #+BEGIN_SRC python
