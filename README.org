@@ -13,6 +13,33 @@ Notes that I tend to forget all the time and search on the internet
 - *compiler* - AST ⇒ Python Byte Code.
 - *interpreter* - execute line by line
 *More* - [[./architecture.org][architecture.org]]
+** components
+functions ⇒ classes ⇒ modules ⇒ packages
+** file extensions
+- py ⇒ The normal extension for a Python source file
+- pyc ⇒ The compiled bytecode
+- pyd ⇒ A Windows DLL file
+- pyo ⇒ A file created with optimizations
+- pyw ⇒ Python script for Windows
+- pyz ⇒ Python script archive
+** pros and cons
+*** pros
+- extensive libs
+- embeddable
+- iot
+- readable
+- free and open source
+- extensible
+- improved productivity
+- simple and easy
+- oop
+- portable
+*** cons
+- speed limitations
+- weak in mobile computing and browsers
+- design restrictions
+- underdeveloped Database Access Layers
+- simple
 ** rules
 #+BEGIN_SRC python
 """
