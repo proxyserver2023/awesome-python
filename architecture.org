@@ -1,0 +1,3 @@
+#+TITLE: Python Architecture
+* References I need to explore
+- [ ] https://www.slideshare.net/thomaslee/inside-python-oscon-2012/2-Overview_About_me_Implemented_unied
