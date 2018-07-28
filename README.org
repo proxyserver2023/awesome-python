@@ -376,6 +376,9 @@ pip install <yourpackagename>
 *** urllib
 *** beautiful soup
 *** bottle
+* Notes
+- *popular implementation* - CPYTHON
+- Compiles a python program into `Intermediate BYTECODE`.
 * Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
 
