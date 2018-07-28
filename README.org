@@ -7,6 +7,12 @@
 Notes that I tend to forget all the time and search on the internet
 
 * CHEATSHEET
+** architecture
+[[./images/architecture/001.jpg]]
+- *Parser* - source code >>> abstract syntax tree [AST].
+- *compiler* - AST >>> Python Byte Code.
+- *interpreter* - execute line by line
+
 ** rules
 #+BEGIN_SRC python
 """
