@@ -233,7 +233,7 @@ __nonzero__(self)
   ##########################
 
   ##########################
-  # Example: using area.py
+  # Example: importing module
   ##########################
   import area
   print(area.circle_area(50)
