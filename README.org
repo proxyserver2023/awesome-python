@@ -284,7 +284,7 @@ print(volume.cube_volume(12))
 
 The Module to be recognized as package should have __path__ attribute
 *** Locating Modules
-at the time of import; python interpreter searches for the module in the following 
+*Module Search Path*: at the time of import; python interpreter searches for the module in the following 
 1. pwd
 2. each dir in the `PYTHONPATH`
 3. default path - on unix `/usr/local/lib/python`
