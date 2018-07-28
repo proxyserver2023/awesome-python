@@ -405,6 +405,66 @@ after that just install
 pip install <yourpackagename>
 #+END_SRC
 
+** applications - frequent libs ref
+*** web and internet
+1. requests - an http client library
+2. beautifulsoup - an html parser
+3. feedparser - for parsing rss/atom feeds
+4. paramiko - implementing the ssh2 protocol
+5. twisted python - async network prog
+*** gui
+1. tk - builtins
+2. wxWidgets
+3. kivy
+4. qt
+5. gtk+
+6. microsoft foundation classes through the win32 extensions
+7. delphi
+*** scientific and numeric
+1. scipy - collection of packages for mathematics science and engineering.
+2. pandas - data analysis and modeling lib
+3. ipython - powerful shell for easy editing and recording of work sessions. supports visualizations and parallel computing.
+4. software carpentry course - teaches basic skills for scientific computing and running bootcamps. open-access teaching materials.
+5. numpy - complex numerical calculations
+
+*** software dev
+1. scons - build-control
+2. buildbot, apache gump - automated and continuous compilation and testing
+3. roundup, trac - project management and bug-tracking
+4. roster of IDE
+*** business app
+- tryton - three-tier, high-level general-purpose application platform
+- odoo - management software
+*** network
+- twisted python - async network programming
+- socket interface
+- ansible
+- netmiko
+- napalm
+- pyeapi
+- juno pyEZ
+- pySNM
+- paramiko SSH
+*** game
+pygame, pykyra
+
+*** big data
+- matplotlib
+- seaborn
+- pandas
+- scikit-learn
+- scipy
+- graphlab create
+- ipython
+- bokeh
+- agate
+- pyspark
+- dask
+** tools
+- dis module ⇒ compiles a script, disassembles the bytecode, and prints the output to the STDOUT.
+- pdb module ⇒ standard python debugger
+- tbnanny module ⇒ checks weird combinations of tabs and spaces.
+
 * QUICK REFERENCE
 ** Reading and writing files
 1. [[./csv.org][csv]]
