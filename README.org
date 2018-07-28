@@ -71,11 +71,29 @@ Namespaces are one honking great idea -- let's do more of those!
 | int           | whole number                           | int()   | 5, -11, 0               |
 | float         | float number                           | float() | 9.57, -0.256, 1.0       |
 | string        | ordered, immutable character container | str()   | "this is a string"      |
+| bool          | bolean                                 | bool()  | true, false             |
 | list          | ordered, mutable container             | list()  | [1, 2.0, "hi"]          |
 | dictionary    | unordered, mutable, associative array  | dict()  | {"k1": "v1", "k2":"v2"  |
 | tuple         | ordered, immutable                     | tuple() | (4, 9), ("word1", "w2") |
 | set           | immutable, ordered                     | set()   | {1, 2, 3, "hello"}      |
 |---------------+----------------------------------------+---------+-------------------------|
+*** int
+- Real Numbers
+- Complex Numbers
+#+BEGIN_SRC python
+a = 2 + 3j
+#+END_SRC
+- binary, octal, hexadecimal
+#+BEGIN_SRC python
+'''
+binary  => 0b or 0B
+octal   => 0o or 0O
+hexadec => 0x or 0X
+'''
+#+END_SRC
+- decimal module
+- fractions module
+- math module
 ** operators
 #+BEGIN_SRC python
 5 +  5   # + => addition
