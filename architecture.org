@@ -1,3 +1,55 @@
 #+TITLE: Python Architecture
+
+* How does python interpreter works?
+1. lexing - the lexer breaks the line of code into tokens.
+2. parsing - the parser uses these tokens to generate a structure, here an AST to depict the relationship between these tokens.
+3. compiling - the compiler turns this AST into code objects
+4. interpreting - the interpreter executes each code object.
+* Function objects & code objects
+#+BEGIN_SRC python
+>>> def bar(a):
+        x = 3
+	return x+a
+>>> bar
+<function bar at 0x7f7bf3658ae8>
+# bar.func_code returns a code object:
+>>> dir(bar)
+['__annotations__', 
+ '__call__', 
+ '__class__', 
+ '__closure__', 
+ '__code__',
+ '__defaults__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__get__',
+ '__getattribute__',
+ '__globals__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__kwdefaults__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__name__',
+ '__ne__',
+ '__new__',
+ '__qualname__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__']
+
+#+END_SRC
 * References I need to explore
 - [ ] https://www.slideshare.net/thomaslee/inside-python-oscon-2012/2-Overview_About_me_Implemented_unied
