@@ -320,6 +320,103 @@ print("I love {b}".format(b='ferrets'))
 print("I love %s and %s" %(a,b))
 #+END_SRC
 
+*** string functions
+#+BEGIN_SRC python
+>>> a='book'
+>>> len(a)
+4
+>>> len(a[2:])
+2
+>>> str(2+3j)
+'2+3j'
+>>> str(['red', 'green', 'blue'])
+"['red', 'green', 'blue']"
+>>> a='Book'
+>>> a.lower()
+'book'
+>>> a.upper()
+'BOOK'
+>>> a=' book '
+>>> a.strip()
+'book'
+>>> a = '777'
+>>> a.isdigit()
+True
+>>> a='77a'
+>>> a.isdigit()
+False
+>>> a='abc'
+>>> a.isalpha()
+True
+>>> a='ab3'
+>>> a.isalpha()
+False
+>>> a = '    '
+>>> a.isspace()
+True
+>>> a=' \'  '
+>>> a.isspace()
+False
+>>> a = 'university'
+>>> a.startswith('un')
+True
+>>> a = 'university'
+>>> a.endswith('ty')
+True
+>>> 'homeowner'.find('meow')
+2
+>>> 'homeowner'.find('ty')
+-1 # if string is not found then return -1
+>>> 'banana'.replace('na', 'ha')
+'bahaha'
+>>> 'No. okay. why?'.split('.')
+['No', ' okay', ' why?']
+>>> "*".join(['red','green','blue'])
+'red*green*blue'
+#+END_SRC
+*** string operations
+#+BEGIN_SRC python
+# comparison
+>>> 'hey' < 'hi'
+True # lexicographically
+>>> a='check'
+>>> a=='check'
+True
+>>> 'yes'!='no'
+True
+
+# arithmetic
+>>> 'ba'+'na'*2
+'banana'
+
+# membership
+>>> 'na' in 'banana'
+True
+>>> 'less' not in 'helpless'
+False
+
+# identity
+# python's identity operators 'is' and 'is not' can be used on strings.
+>>> "Hey" is "Hi"
+False
+>>> "Yo" is not "yo"
+True
+
+# logical
+# an empty string has a boolean value of false.
+>>> '' and '1'
+""
+>>> '1' and ''
+""
+>>> "1" or ""
+"1"
+>>> "" or "1"
+"1"
+>>> not('1')
+False
+>>> not('')
+True
+#+END_SRC
 ** lists
 #+BEGIN_SRC python
   # create a list
