@@ -235,6 +235,91 @@ we never need to import any modules to access built-ins like print(), id()
 1 in [3, 4, 5, 6] # returns true if 1 is in the collection
 #+END_SRC
 
+** strings
+*** create a string
+#+BEGIN_SRC python
+>>> type('Hello World')
+<class 'str'>
+#+END_SRC
+
+python doesn't have the char data-type
+#+BEGIN_SRC python
+a='Hello"
+# outputs
+# SyntaxError: EOL while scanning string literal
+#+END_SRC
+
+a string is immutable; it can't be changed
+#+BEGIN_SRC python
+>>> a="Dogs"
+>>> a[0]="H"
+Traceback (most recent call last):
+File "<pyshell#22>", line 1, in <module>
+a[0]="H"
+
+"""
+TypeError: 'str' object doesn't support item assignment
+"""
+#+END_SRC
+
+*** string slicing
+#+BEGIN_SRC python
+a = 'Hello There'
+# displaying a single character
+a[1]
+
+# slicing a string
+"""
+a[start:end:step] # start through not past end, by step
+a[start:end]      # items start through end-1
+a[start:]         # items start through the rest of the array
+a[:end]           # items from the beginning through end-1
+a[:]              # copy of whole array
+"""
+#+END_SRC
+*** string concatenation
+#+BEGIN_SRC python
+a = 'Do you see this,'
+b = '$$'
+a + b # => 'Do you see this, $$
+2 * a # => Do you see this,Do you see this,
+a * 2 # => Do you see this,Do you see this,
+
+>>> '10'+10
+Traceback (most recent call last):
+File "<pyshell#49>", line 1, in <module>
+#+END_SRC
+*** string formatters
+#+BEGIN_SRC python
+"""
+f-strings
+"""
+name='John D. Rockerfeller'
+print(f"Happy birthday, {name} Sir")
+#+END_SRC
+
+#+BEGIN_SRC python
+"""
+format() method
+"""
+a="cats"
+print("I love {0}".format(a))
+print("I love {0}".format(a="Dogs"))
+
+"""
+The variables don’t have to defined before the print statement
+"""
+print("I love {b}".format(b='ferrets'))
+
+"""
+% operator- The % operator goes where the variables go in a string. 
+%s is for string. What follows the string is the operator and variables in parentheses/in a tuple.
+%d -> int
+%f -> float
+"""
+print("I love %s and %s" %(a,b))
+#+END_SRC
+
 ** lists
 #+BEGIN_SRC python
   # create a list
