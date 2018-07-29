@@ -77,7 +77,7 @@ Namespaces are one honking great idea -- let's do more of those!
 | tuple         | ordered, immutable                     | tuple() | (4, 9), ("word1", "w2") |
 | set           | immutable, ordered                     | set()   | {1, 2, 3, "hello"}      |
 |---------------+----------------------------------------+---------+-------------------------|
-*** int
+*** Numbers
 - Real Numbers
 - Complex Numbers
 #+BEGIN_SRC python
