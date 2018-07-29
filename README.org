@@ -94,6 +94,127 @@ hexadec => 0x or 0X
 - decimal module
 - fractions module
 - math module
+** variable scope
+*** Different scopes - 
+[[https://data-flair.training/blogs/wp-content/uploads/Scopes-01.jpg]]
+- local
+#+BEGIN_SRC python
+  >>> a=0
+  >>> def func():
+        print(a)
+        a=1
+        print(a)            
+  >>> func()
+  Traceback (most recent call last):
+  File "<pyshell#79>", line 1, in <module>
+  func()
+  File "<pyshell#78>", line 2, in func
+  print(a)
+  UnboundLocalError: Local Variable 'a' referenced before assignment.
+#+END_SRC
+- enclosing
+#+BEGIN_SRC python
+  def red():
+      a = 1
+    
+      def blue():
+          b = 2
+          print(a)
+          print(b)
+
+      blue()
+      print(a)
+
+  red()
+
+"""
+1
+2
+1
+"""
+#+END_SRC
+- nonlocal <keyword>
+#+BEGIN_SRC python
+  # without nonlocal
+  x = 0
+  def outer():
+      x = 1
+      def inner():
+          x = 2
+          print("inner:", x)
+
+      inner()
+      print("outer:", x)
+
+  outer()
+  print("global:", x)
+
+  # inner: 2
+  # outer: 1
+  # global: 0
+#+END_SRC
+#+BEGIN_SRC python
+"""
+To this, using nonlocal, where inner()'s x is now also outer()'s x:
+"""
+x = 0
+def outer():
+    x = 1
+    def inner():
+        nonlocal x
+        x = 2
+        print("inner:", x)
+
+    inner()
+    print("outer:", x)
+
+outer()
+print("global:", x)
+
+# inner: 2
+# outer: 2
+# global: 0
+#+END_SRC
+#+BEGIN_SRC python
+"""
+If we were to use global, it would bind x to the properly "global" value:
+"""
+x = 0
+def outer():
+    x = 1
+    def inner():
+        global x
+        x = 2
+        print("inner:", x)
+
+    inner()
+    print("outer:", x)
+
+outer()
+print("global:", x)
+
+# inner: 2
+# outer: 1
+# global: 2
+#+END_SRC
+- global
+#+BEGIN_SRC python
+  a = 1
+  def counter():
+      global a
+      a = 2
+      print(a)
+  counter()
+  """
+  a becomes 2 both inside and outside
+  """
+#+END_SRC
+- built-in
+#+BEGIN_SRC python
+"""
+we never need to import any modules to access built-ins like print(), id()
+"""
+#+END_SRC
 ** operators
 #+BEGIN_SRC python
 5 +  5   # + => addition
