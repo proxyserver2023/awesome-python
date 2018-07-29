@@ -95,7 +95,7 @@ hexadec => 0x or 0X
 - fractions module
 - math module
 ** variable scope
-*** Different scopes - 
+*** Different scopes:
 [[https://data-flair.training/blogs/wp-content/uploads/Scopes-01.jpg]]
 - local
 #+BEGIN_SRC python
