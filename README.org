@@ -221,7 +221,7 @@ we never need to import any modules to access built-ins like print(), id()
 6 -  2   # - => subtraction
 1 *  2   # * => multiplication
 5 /  2   # / => division with floating point ## output:: 2.5
-5 // 2   # // => division without integer flooring the float value ## output :: 2
+5 // 2   # // => division flooring the float value ## output :: 2
 2 ** 3   # exponent
 5 %  2   # modulus
 5 >  2   # greater than op
