@@ -1041,11 +1041,11 @@ cl(ear) filename:lineno
 cl(ear) [bpnumber [bpnumber...]]
 #+END_SRC
 **** TODO Continuing Execution
-[[https://realpython.com/python-debugging-pdb/#using-breakpoints]]
+[[https://realpython.com/python-debugging-pdb/#continuing-execution]]
 **** TODO Displaying Expressions
-[[https://realpython.com/python-debugging-pdb/#using-breakpoints]]
+[[https://realpython.com/python-debugging-pdb/#displaying-expressions]]
 **** TODO Python caller id
-[[https://realpython.com/python-debugging-pdb/#using-breakpoints]]
+[[https://realpython.com/python-debugging-pdb/#python-caller-id]]
 **** essential pdb commands
 Just enter =h= or =help= =<topic>= to get a list of all commands or help for a specific command or topic.
 
