@@ -783,9 +783,204 @@ pygame, pykyra
 - dask
 ** tools
 - dis module ⇒ compiles a script, disassembles the bytecode, and prints the output to the STDOUT.
-- pdb module ⇒ standard python debugger
 - tbnanny module ⇒ checks weird combinations of tabs and spaces.
+*** debugging
+pdb module ⇒ python interactive debugger
+**** printing a variables value
+#+BEGIN_SRC python
+import pdb; pdb.set_trace()
+#+END_SRC
+in `python 3.7` there's `breakpoint()` built-in
+#+BEGIN_SRC python
+breakpoint()
+"""
+it allows you to control debugging behavior via it's API and use of the environment variable PYTHONBREAKPOINT.
+setting PYTHONBREAKPOINT=0 in your environment will completely disable breakpoint(), thus disabling debugging.
+"""
+#+END_SRC
 
+#+BEGIN_SRC python
+#!/usr/bin/env python3
+
+filename = __file__
+import pdb; pdb.set_trace()
+print(f'path = {filename}')
+#+END_SRC
+
+
+#+BEGIN_SRC shell
+$ ./example1.py 
+> /code/example1.py(5)<module>()
+-> print(f'path = {filename}')
+(Pdb) 
+#+END_SRC
+
+#+BEGIN_SRC shell
+(Pdb) p filename
+'./example1.py'
+(Pdb)
+#+END_SRC
+
+- `>` starts the 1st line and tells you which source file you're in. after the filename, there is `current line number(5)`. Next the name of the function. Since we're not paused inside a function and at module level, we see `<module>()`.
+- `->` starts the 2nd line and is the current source line where python is paused. The line hasn't been executed yet.
+- `(Pdb)` is pdb's prompt. It's waiting for a command.
+#+BEGIN_SRC shell
+(Pdb) q # Quits debugging and exit.
+#+END_SRC
+
+**** printing expressions
+#+BEGIN_SRC python
+#!/usr/bin/env python3
+
+import os
+
+
+def get_path(filename):
+    """Return file's path or empty string if no path."""
+    head, tail = os.path.split(filename)
+    import pdb; pdb.set_trace()
+    return head
+
+
+filename = __file__
+print(f'path = {get_path(filename)}')
+#+END_SRC
+#+BEGIN_SRC shell
+$ ./example2.py 
+> /code/example2.py(10)get_path()
+-> return head
+(Pdb) 
+#+END_SRC
+#+BEGIN_SRC shell
+(Pdb) ll
+  6     def get_path(filename):
+  7         """Return file's path or empty string if no path."""
+  8         head, tail = os.path.split(filename)
+  9         import pdb; pdb.set_trace()
+ 10  ->     return head
+(Pdb) p filename
+'./example2.py'
+(Pdb) p head, tail
+('.', 'example2.py')
+(Pdb) p 'filename: ' + filename
+'filename: ./example2.py'
+(Pdb) p get_path
+<function get_path at 0x100760e18>
+(Pdb) p getattr(get_path, '__doc__')
+"Return file's path or empty string if no path."
+(Pdb) p [os.path.split(p)[1] for p in os.path.sys.path]
+['pdb-basics', 'python36.zip', 'python3.6', 'lib-dynload', 'site-packages']
+(Pdb) 
+#+END_SRC
+use `pp` for `pretty print`.
+**** stepping through code
+| Command | Description |
+|---------+-------------|
+| n(next) | step over   |
+| s(step) | step in     |
+
+- *n (next)* : Continue-execution until the next line in the current function is reached or it returns.
+#+BEGIN_EXAMPLE
+Use n (next) to continue execution until the next line and stay within the current function, i.e. not stop in a foreign function if one is called. Think of next as “staying local” or “step over”.
+#+END_EXAMPLE
+- *s (step)* : Execute the current line and stop at the first possible occasion (either in a function that is called or in the current function).
+#+BEGIN_EXAMPLE
+Use s (step) to execute the current line and stop in a foreign function if one is called. Think of step as “step into”. If execution is stopped in another function, s will print --Call--.
+#+END_EXAMPLE
+
+#+BEGIN_SRC python
+#!/usr/bin/env python3
+
+import os
+
+
+def get_path(filename):
+    """Return file's path or empty string if no path."""
+    head, tail = os.path.split(filename)
+    return head
+
+
+filename = __file__
+import pdb; pdb.set_trace()
+filename_path = get_path(filename)
+print(f'path = {filename_path}')
+#+END_SRC
+
+#+BEGIN_SRC shell
+$ ./example3.py 
+> /code/example3.py(14)<module>()
+-> filename_path = get_path(filename)
+(Pdb) n
+> /code/example3.py(15)<module>()
+-> print(f'path = {filename_path}')
+(Pdb) 
+#+END_SRC
+With n (next), we stopped on line 15, the next line. We “stayed local” in <module>() and “stepped over” the call to get_path(). The function is <module>() since we’re currently at module level and not paused inside another function.
+
+Let's try `s`:
+#+BEGIN_SRC shell
+$ ./example3.py 
+> /code/example3.py(14)<module>()
+-> filename_path = get_path(filename)
+(Pdb) s
+--Call--
+> /code/example3.py(6)get_path()
+-> def get_path(filename):
+(Pdb) 
+#+END_SRC
+With s (step), we stopped on line 6 in the function get_path() since it was called on line 14. Notice the line --Call-- after the s command.
+
+Press `Enter` for previous command in `pdb`.
+#+BEGIN_SRC shell
+$ ./example3.py 
+> /code/example3.py(14)<module>()
+-> filename_path = get_path(filename)
+(Pdb) s
+--Call--
+> /code/example3.py(6)get_path()
+-> def get_path(filename):
+(Pdb) n
+> /code/example3.py(8)get_path()
+-> head, tail = os.path.split(filename)
+(Pdb) 
+> /code/example3.py(9)get_path()
+-> return head
+(Pdb) 
+--Return--
+> /code/example3.py(9)get_path()->'.'
+-> return head
+(Pdb) 
+> /code/example3.py(15)<module>()
+-> print(f'path = {filename_path}')
+(Pdb) 
+path = .
+--Return--
+> /code/example3.py(15)<module>()->None
+-> print(f'path = {filename_path}')
+(Pdb) 
+#+END_SRC
+
+Note the lines `--Call--` and `--Return--`. This is pdb letting you know why execution was stopped. n (next) and s (step) will stop before a function returns. That’s why you see the `--Return--` lines above.
+
+Also note ->'.' at the end of the line after the first --Return-- above:
+#+BEGIN_SRC shell
+--Return--
+> /code/example3.py(9)get_path()->'.'
+-> return head
+(Pdb) 
+#+END_SRC
+
+** 3.7 new features
+- PEP 539, new C API for thread-local storage
+- PEP 545, python documentation translations
+- PEP 552, Deterministic pyc files
+- PEP 557, Data Classes
+- PEP 560, Core Support for typing module and generic types
+- PEP 562, Customization of access to module attributes
+- PEP 563, Postponed evaluation of annotations
+- PEP 564, Time functions with nanosecond resolution
+- PEP 565, Improved `DeprecationWarning` handling
+- PEP 567, Context Variables
 * QUICK REFERENCE
 ** Reading and writing files
 1. [[./csv.org][csv]]
