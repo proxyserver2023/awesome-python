@@ -586,7 +586,7 @@ __nonzero__(self)
 ** modules and packages
 [[./images/modules_and_packages/Python-packages-.gif]]
 *** Modules
-`<file-name>.py` contains definitions, functions, classes and statements
+=<file-name>.py= contains definitions, functions, classes and statements
 #+BEGIN_SRC python
 
   ##########################
@@ -625,7 +625,7 @@ __nonzero__(self)
 
 #+END_SRC
 
-*Executing modules as scripts* : `__name__` is set to `__main__` when the module is run as standalone program.
+*Executing modules as scripts* : =__name__= is set to =__main__= when the module is run as standalone program.
 run script as stand-alone program
 #+BEGIN_SRC python
   if __name__ == '__main__':
