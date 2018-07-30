@@ -970,6 +970,106 @@ Also note ->'.' at the end of the line after the first --Return-- above:
 (Pdb) 
 #+END_SRC
 
+**** using breakpoints
+Breakpoints are very convenient and can save you a lot of time. Instead of stepping through dozens of lines you’re not interested in, simply create a breakpoint where you want to investigate. Optionally, you can also tell pdb to break only when a certain condition is true.
+
+Syntax of break is:
+#+BEGIN_SRC shell
+b(reak) [ ([filename:]lineno | function) [, condition] ]
+#+END_SRC
+
+#+BEGIN_SRC python
+#!/usr/bin/env python3
+
+import util
+
+filename = __file__
+import pdb; pdb.set_trace()
+filename_path = util.get_path(filename)
+print(f'path = {filename_path}')
+#+END_SRC
+
+Here is the source for utility module =util.py=
+#+BEGIN_SRC python
+def get_path(filename):
+    """Return file's path or empty string if no path."""
+    import os
+    head, tail = os.path.split(filename)
+    return head
+#+END_SRC
+
+First, let’s set a breakpoint using the source filename and line number:
+#+BEGIN_SRC shell
+$ ./example4.py 
+> /code/example4.py(7)<module>()
+-> filename_path = util.get_path(filename)
+(Pdb) b util:5
+Breakpoint 1 at /code/util.py:5
+(Pdb) c
+> /code/util.py(5)get_path()
+-> return head
+(Pdb) p filename, head, tail
+('./example4.py', '.', 'example4.py')
+(Pdb) 
+#+END_SRC
+
+Enter b with no arguments to see a list of all breakpoints
+#+BEGIN_SRC shell
+(Pdb) b
+Num Type         Disp Enb   Where
+1   breakpoint   keep yes   at /code/util.py:1
+(Pdb) 
+#+END_SRC
+
+#+BEGIN_SRC shell
+(Pdb) disable 1
+Disabled breakpoint 1 at /code/util.py:1
+(Pdb) b
+Num Type         Disp Enb   Where
+1   breakpoint   keep no    at /code/util.py:1
+(Pdb) enable 1
+Enabled breakpoint 1 at /code/util.py:1
+(Pdb) b
+Num Type         Disp Enb   Where
+1   breakpoint   keep yes   at /code/util.py:1
+(Pdb)
+#+END_SRC
+
+To delete a breakpoint, use the command cl(clear):
+#+BEGIN_SRC shell
+cl(ear) filename:lineno
+cl(ear) [bpnumber [bpnumber...]]
+#+END_SRC
+**** TODO Continuing Execution
+[[https://realpython.com/python-debugging-pdb/#using-breakpoints]]
+**** TODO Displaying Expressions
+[[https://realpython.com/python-debugging-pdb/#using-breakpoints]]
+**** TODO Python caller id
+[[https://realpython.com/python-debugging-pdb/#using-breakpoints]]
+**** essential pdb commands
+Just enter =h= or =help= =<topic>= to get a list of all commands or help for a specific command or topic.
+
+| Command    | 	Description                                                                                                                                                                                              |
+|------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| p          | 	Print the value of an expression.                                                                                                                                                                        |
+| pp         | 	Pretty-print the value of an expression.                                                                                                                                                                 |
+| n          | 	Continue execution until the next line in the current function is reached or it returns.                                                                                                                 |
+| s          | 	Execute the current line and stop at the first possible occasion (either in a function that is called or in the current function).                                                                       |
+| c          | 	Continue execution and only stop when a breakpoint is encountered.                                                                                                                                       |
+| unt        | 	Continue execution until the line with a number greater than the current one is reached. With a line number argument, continue execution until a line with a number greater or equal to that is reached. |
+| l          | 	List source code for the current file. Without arguments, list 11 lines around the current line or continue the previous listing.                                                                        |
+| ll         | 	List the whole source code for the current function or frame.                                                                                                                                            |
+| b          | 	With no arguments, list all breaks. With a line number argument, set a breakpoint at this line in the current file.                                                                                      |
+| w          | 	Print a stack trace, with the most recent frame at the bottom. An arrow indicates the current frame, which determines the context of most commands.                                                      |
+| u          | 	Move the current frame count (default one) levels up in the stack trace (to an older frame).                                                                                                             |
+| d          | 	Move the current frame count (default one) levels down in the stack trace (to a newer frame).                                                                                                            |
+| h          | 	See a list of available commands.                                                                                                                                                                        |
+| h  <topic> | 	Show help for a command or topic.                                                                                                                                                                        |
+| h  pdb     | 	Show the full pdb documentation.                                                                                                                                                                         |
+| q          | 	Quit the debugger and exit.                                                                                                                                                                              |
+
+
+
 ** 3.7 new features
 - PEP 539, new C API for thread-local storage
 - PEP 545, python documentation translations
