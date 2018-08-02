@@ -6,12 +6,15 @@
 #+OPTIONS: toc:2          
 
 *** Language Reference
-- [[./architecture.org][Architecture]]
-- [[./debugging.org][Debugging]]
-- [[.testing.org][Testing]]
-- [[./modules_and_packages.org][Modules and Packages]]
+- [[./packages/architecture.org][Architecture]]
+- [[./packages/debugging.org][Debugging]]
+- [[./packages/testing.org][Testing]]
+- [[./packages/modules_and_packages.org][Modules and Packages]]
+- [[./packages/networking.org][Networking]]
+- [[./packages/file.org][File]]
+- [[./packages/data_structures][Data Structures]]
 *** Web Frameworks
-- [[./django.org][Django]]
+- [[./packages/django.org][Django]]
 ** Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
 ** Versioning

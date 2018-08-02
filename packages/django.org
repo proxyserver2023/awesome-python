@@ -1,0 +1,59 @@
+#+TITLE: Django
+#+BEGIN_QUOTE
+The Web Framework for perfectionists with deadlines
+#+END_QUOTE
+
+*** Quick Install
+1. check python is up and running
+#+BEGIN_SRC shell
+python3
+Python 3.6.5 (default, Apr  1 2018, 05:46:30) 
+[GCC 7.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+#+END_SRC
+2. setup db - =postgres= or =mysql= or =any other with backend support=
+3. install django
+#+BEGIN_SRC shell
+# activate a virtualenv first.
+pip install django
+#+END_SRC
+4. verifying
+#+BEGIN_SRC python
+>>> import django
+>>> print(django.get_version())
+2.1
+#+END_SRC
+*** Basic Structure
+#+BEGIN_EXAMPLE
+mysite/
+    manage.py
+    mysite/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+    polls/
+        __init__.py
+        admin.py
+        migrations/
+            __init__.py
+            0001_initial.py
+        models.py
+        static/
+            polls/
+                images/
+                    background.gif
+                style.css
+        templates/
+            polls/
+                detail.html
+                index.html
+                results.html
+        tests.py
+        urls.py
+        views.py
+    templates/
+        admin/
+            base_site.html
+#+END_EXAMPLE
