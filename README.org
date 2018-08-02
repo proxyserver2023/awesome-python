@@ -5,10 +5,13 @@
 #+DESCRIPTION: Quick Reference for this ever-forgetting mind.
 #+OPTIONS: toc:2          
 
-1. [[./architecture.org][Architecture]]
-2. [[./debugging.org][Debugging]]
-3. [[.testing.org][Testing]]
-
+*** Language Reference
+- [[./architecture.org][Architecture]]
+- [[./debugging.org][Debugging]]
+- [[.testing.org][Testing]]
+- [[./modules_and_packages.org][Modules and Packages]]
+*** Web Frameworks
+- [[./django.org][Django]]
 ** Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
 ** Versioning
