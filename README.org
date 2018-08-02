@@ -5,9 +5,9 @@
 #+DESCRIPTION: Quick Reference for this ever-forgetting mind.
 #+OPTIONS: toc:2          
 
-* Architecture
-* Debugging
-* Testing
+1. [[./architecture.org][Architecture]]
+2. [[./debugging.org][Debugging]]
+3. [[.testing.org][Testing]]
 
 * Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
