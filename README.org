@@ -3,7 +3,7 @@
 #+EMAIL: alamin.ineedahelp@gmail.com
 #+STARTUP: overview indent inlineimages hideblocks
 #+DESCRIPTION: Quick Reference for this ever-forgetting mind.
-
+#+OPTIONS: toc:2          
 Notes that I tend to forget all the time and search on the internet
 
 * CHEATSHEET
@@ -1018,7 +1018,6 @@ See also the list of contributors who participated in this project.
 
 * License
 This project is licensed under the MIT License - see the [[./LICENSE][LICENSE]] file for details
-
 * Acknowledgments
 Hat tip to anyone whose code was used
 Inspiration
