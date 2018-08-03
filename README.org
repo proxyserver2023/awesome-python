@@ -31,7 +31,7 @@
 :CUSTOM_ID: language-reference
 :END:
 - File Extensions
-| .ext | desc                                  |
+| .ext | description                           |
 |------+---------------------------------------|
 | .py  | normal extension for a py source file |
 | .pyc | compiled bytecode                     |
