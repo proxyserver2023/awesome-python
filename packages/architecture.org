@@ -11,3 +11,6 @@
 | Parser      | source code      | abstract syntax tree [ast] |
 | Compiler    | ast              | python byte code           |
 | Interpreter | python byte code | execute line by line       |
+
+* Components
+functions ⇒ classes ⇒ modules ⇒ packages
