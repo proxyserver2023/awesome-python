@@ -1,0 +1,182 @@
+*** strings
+**** create a string
+ #+BEGIN_SRC python
+ >>> type('Hello World')
+ <class 'str'>
+ #+END_SRC
+
+ python doesn't have the char data-type
+ #+BEGIN_SRC python
+ a='Hello"
+ # outputs
+ # SyntaxError: EOL while scanning string literal
+ #+END_SRC
+
+ a string is immutable; it can't be changed
+ #+BEGIN_SRC python
+ >>> a="Dogs"
+ >>> a[0]="H"
+ Traceback (most recent call last):
+ File "<pyshell#22>", line 1, in <module>
+ a[0]="H"
+
+ """
+ TypeError: 'str' object doesn't support item assignment
+ """
+ #+END_SRC
+
+**** string slicing
+ #+BEGIN_SRC python
+ a = 'Hello There'
+ # displaying a single character
+ a[1]
+
+ # slicing a string
+ """
+ a[start:end:step] # start through not past end, by step
+ a[start:end]      # items start through end-1
+ a[start:]         # items start through the rest of the array
+ a[:end]           # items from the beginning through end-1
+ a[:]              # copy of whole array
+ """
+ #+END_SRC
+**** string concatenation
+ #+BEGIN_SRC python
+ a = 'Do you see this,'
+ b = '$$'
+ a + b # => 'Do you see this, $$
+ 2 * a # => Do you see this,Do you see this,
+ a * 2 # => Do you see this,Do you see this,
+
+ >>> '10'+10
+ Traceback (most recent call last):
+ File "<pyshell#49>", line 1, in <module>
+ #+END_SRC
+**** string formatters
+ #+BEGIN_SRC python
+ """
+ f-strings
+ """
+ name='John D. Rockerfeller'
+ print(f"Happy birthday, {name} Sir")
+ #+END_SRC
+
+ #+BEGIN_SRC python
+ """
+ format() method
+ """
+ a="cats"
+ print("I love {0}".format(a))
+ print("I love {0}".format(a="Dogs"))
+
+ """
+ The variables don’t have to defined before the print statement
+ """
+ print("I love {b}".format(b='ferrets'))
+
+ """
+ % operator- The % operator goes where the variables go in a string. 
+ %s is for string. What follows the string is the operator and variables in parentheses/in a tuple.
+ %d -> int
+ %f -> float
+ """
+ print("I love %s and %s" %(a,b))
+ #+END_SRC
+
+**** string functions
+ #+BEGIN_SRC python
+ >>> a='book'
+ >>> len(a)
+ 4
+ >>> len(a[2:])
+ 2
+ >>> str(2+3j)
+ '2+3j'
+ >>> str(['red', 'green', 'blue'])
+ "['red', 'green', 'blue']"
+ >>> a='Book'
+ >>> a.lower()
+ 'book'
+ >>> a.upper()
+ 'BOOK'
+ >>> a=' book '
+ >>> a.strip()
+ 'book'
+ >>> a = '777'
+ >>> a.isdigit()
+ True
+ >>> a='77a'
+ >>> a.isdigit()
+ False
+ >>> a='abc'
+ >>> a.isalpha()
+ True
+ >>> a='ab3'
+ >>> a.isalpha()
+ False
+ >>> a = '    '
+ >>> a.isspace()
+ True
+ >>> a=' \'  '
+ >>> a.isspace()
+ False
+ >>> a = 'university'
+ >>> a.startswith('un')
+ True
+ >>> a = 'university'
+ >>> a.endswith('ty')
+ True
+ >>> 'homeowner'.find('meow')
+ 2
+ >>> 'homeowner'.find('ty')
+ -1 # if string is not found then return -1
+ >>> 'banana'.replace('na', 'ha')
+ 'bahaha'
+ >>> 'No. okay. why?'.split('.')
+ ['No', ' okay', ' why?']
+ >>> "*".join(['red','green','blue'])
+ 'red*green*blue'
+ #+END_SRC
+**** string operations
+ #+BEGIN_SRC python
+ # comparison
+ >>> 'hey' < 'hi'
+ True # lexicographically
+ >>> a='check'
+ >>> a=='check'
+ True
+ >>> 'yes'!='no'
+ True
+
+ # arithmetic
+ >>> 'ba'+'na'*2
+ 'banana'
+
+ # membership
+ >>> 'na' in 'banana'
+ True
+ >>> 'less' not in 'helpless'
+ False
+
+ # identity
+ # python's identity operators 'is' and 'is not' can be used on strings.
+ >>> "Hey" is "Hi"
+ False
+ >>> "Yo" is not "yo"
+ True
+
+ # logical
+ # an empty string has a boolean value of false.
+ >>> '' and '1'
+ ""
+ >>> '1' and ''
+ ""
+ >>> "1" or ""
+ "1"
+ >>> "" or "1"
+ "1"
+ >>> not('1')
+ False
+ >>> not('')
+ True
+ #+END_SRC
