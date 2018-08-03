@@ -31,6 +31,7 @@
 :PROPERTIES:
 :CUSTOM_ID: language-reference
 :END:
+- [[./packages/language-reference/best-practices.org][Best Practices]]
 - [[./packages/language-reference/architecture.org][Architecture]]
 - [[./packages/language-reference/cons.org][Cons / Disadvantages]]
 - [[./packages/language-reference/file-extensions.org][File Extensions]]
@@ -39,7 +40,16 @@
 - [[./packages/language-reference/list.org][List]]
 - [[./packages/language-reference/object_oriented_programming.org][Object Oriented Programming]]
 - [[./packages/language-reference/strings.org][Strings]]
-
+- [[./packages/language-reference/built-in-functions.org][Built In Functions]]
+- [[./packages/language-reference/namespace-and-scopes.org][Namespaces and Scopes]]
+- [[.//packages/language-reference/lexical-analysis.org#standard-type-hierarchy][Standard Type Hierarchy]]
+- [[./packages/language-reference/exceptions.org][Exceptions]]
+- [[./packages/language-reference/comparisons.org][Comparisons]]
+- [[./packages/language-reference/operations.org][Operations]]
+- Context Managers
+- Generators
+- Decorators
+- Iterators
 *** Web Frameworks
 :PROPERTIES:
 :CUSTOM_ID: web-frameworks
