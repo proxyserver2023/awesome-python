@@ -61,6 +61,45 @@
   os.devnull -> '/dev/null', etc
   """
   #+END_SRC
+- sys
+  #+BEGIN_SRC python
+    """
+    --- Dynamic Objects ---
+    argv -- command line args
+    path -- module search path
+    path[0] -- script directory else ''
+    modules -- dictionary of loaded modules
+
+    stdin -- standard input file obj; used by input()
+    stdout -- standard output file obj; used by print()
+    stderr -- standard error obj; used for error messages
+
+    last_type -- type of last uncaught exception
+    last_value -- value of last uncaught exception
+    last_traceback -- traceback of last uncaught exception
+
+    --- Static Objects ---
+    builtin_module_names -- tuple of module names built into this interpreter
+    exec_prefix -- prefix used to find the machine-specific Python library
+    executable -- absolute path of the executable binary of the Python interpreter.
+
+    --- functions ---
+    exit() -- exit the interpreter by raising SystemExit
+    """
+  #+END_SRC
+  Command Line Args for following command
+  #+BEGIN_SRC shell
+  python foo.py bar -c qux --h
+  #+END_SRC
+  #+BEGIN_SRC python
+    """
+    sys.argv[0] => script_name => foo.py
+    sys.argv[1] => first_arg   => bar
+    sys.argv[2] => second_arg  => -c
+    sys.argv[3] => third_arg   => qux
+    sys.argv[4] => fourth_arg  => --h
+    """
+  #+END_SRC
 ** Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
 ** Versioning
