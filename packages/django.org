@@ -59,36 +59,36 @@ pip install django
 >>> print(django.get_version())
 2.1
 #+END_SRC
-*** Basic Structure
+*** Structure
 #+BEGIN_EXAMPLE
-mysite/
-    manage.py
-    mysite/
+mysite/               ---------   => root
+    manage.py         ---------   => we execute command with it
+    mysite/           ---------   => main app 
         __init__.py
-        settings.py
-        urls.py
+        settings.py   ---------   => main settings file
+        urls.py       ---------   => main url
         wsgi.py
-    polls/
+    polls/            ---------   => another app
         __init__.py
-        admin.py
-        migrations/
+        admin.py      ---------   => admin  
+        migrations/   ---------   => migrations
             __init__.py
             0001_initial.py
-        models.py
-        static/
-            polls/
+        models.py     ---------   => models for that app
+        static/       ---------   => static data for that app
+            polls/    ---------   => every data is inside a folder of app name
                 images/
                     background.gif
                 style.css
-        templates/
+        templates/    ---------   => templates
             polls/
                 detail.html
                 index.html
                 results.html
-        tests.py
-        urls.py
-        views.py
-    templates/
+        tests.py      ----------  => tests file/folder for that app
+        urls.py       ----------  => routing for that app
+        views.py      ----------  => view file for that app
+    templates/        ----------  => templates for root level
         admin/
             base_site.html
 #+END_EXAMPLE
