@@ -26,6 +26,7 @@
 - Authentication
 - Caching
 - Concurrency & Paralellism
+- [[#standard-libraries][Standard Libraries]]
 *** Language Reference
 :PROPERTIES:
 :CUSTOM_ID: language-reference
@@ -45,6 +46,21 @@
 :CUSTOM_ID: web-frameworks
 :END:
 - [[./packages/django.org][Django]]
+*** Standard Libraries
+:PROPERTIES:
+:CUSTOM_ID: standard-libraries
+:END:
+- os
+  #+BEGIN_SRC python
+  """
+  os.name    -> `posix` or `nt`
+  os.curdir  -> .
+  os.pardir  -> ..
+  os.sep     -> '/' or '\'
+  os.linesep -> '\r' or '\n' or '\r\n'
+  os.devnull -> '/dev/null', etc
+  """
+  #+END_SRC
 ** Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
 ** Versioning
