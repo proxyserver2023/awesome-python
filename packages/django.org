@@ -3,8 +3,9 @@
 The Web Framework for perfectionists with deadlines
 #+END_QUOTE
 *** Table of Contents
+- [[#Cheatsheet][Cheatsheet]]
 - [[#Quick Install][Quick Install]]
-- [[#Basic Structure][Basic Structure]]
+- [[#Example][Example]]
 - [[#Model][Model]]
 - [[#View][View]]
 - [[#Template][Template]]
@@ -37,7 +38,34 @@ The Web Framework for perfectionists with deadlines
   - [[#System check framework][System check framework]]
   - [[#The sites framework][The sites framework]]
   - [[#Unicode in Django][Unicode in Django]]
+- [[#Misc][Misc]]
 
+*** CheatSheet
+create project
+#+BEGIN_SRC shell
+django-admin startproject <project_name>
+#or to create project inside the same directory
+django-admin startproject <project_name> . 
+#+END_SRC
+
+runserver
+#+BEGIN_SRC shell
+python manage.py runserver <ip>:<port>
+#+END_SRC
+
+shell
+#+BEGIN_SRC shell
+python manage.py shell
+#+END_SRC
+
+migrations
+#+BEGIN_SRC shell
+python manage.py makemigrations <app_name>
+python manage.py makemigrate
+
+# to see the generated sql
+
+#+END_SRC
 *** Quick Install
 1. check python is up and running
 #+BEGIN_SRC shell
@@ -59,7 +87,8 @@ pip install django
 >>> print(django.get_version())
 2.1
 #+END_SRC
-*** Structure
+*** Example
+- Repository - [[https://github.com/AlaminMahamud/django-polls][django-polls]]
 #+BEGIN_EXAMPLE
 mysite/               ---------   => root
     manage.py         ---------   => we execute command with it
@@ -103,5 +132,13 @@ mysite/               ---------   => root
 *** Performance & Optimization
 *** Geographic framework
 *** Common Web Application Tools
-
 *** Other Core Functionalities
+*** Misc
+**** Automatic Reloading of =runserver=
+The development server automatically reloads Python code for each request as needed. You don’t need to restart the server for code changes to take effect. However, some actions like adding files don’t trigger a restart, so you’ll have to restart the server in these cases.
+
+**** Projects vs Apps
+What’s the difference between a project and an app? An app is a Web application that does something – e.g., a Weblog system, a database of public records or a simple poll app. A project is a collection of configuration and apps for a particular website. A project can contain multiple apps. An app can be in multiple projects.
+
+**** When to use =include()=
+You should always use =include()= when you include other URL patterns. =admin.site.urls= is the only exception to this
