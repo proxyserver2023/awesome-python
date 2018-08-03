@@ -1,0 +1,5 @@
+*** ="is none"= vs ="==none"=
+#+BEGIN_SRC python
+  if x is not y:
+      DoSomething()
+#+END_SRC
