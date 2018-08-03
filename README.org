@@ -10,7 +10,6 @@
 - Networking
 - Algorithms
 - Data Structures
-- Modules and Packages
 - Testing
 - Debugging
 - Networking
@@ -32,6 +31,7 @@
 :CUSTOM_ID: language-reference
 :END:
 - Architecture
+- Modules and Packages
 *** Web Frameworks
 :PROPERTIES:
 :CUSTOM_ID: web-frameworks
