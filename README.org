@@ -32,6 +32,7 @@
 :CUSTOM_ID: language-reference
 :END:
 - [[./packages/language-reference/architecture.org][Architecture]]
+- [[./packages/language-reference/cons.org][Cons / Disadvantages]]
 - [[./packages/language-reference/file-extensions.org][File Extensions]]
 - [[./packages/language-reference/modules_and_packages.org][Modules and Packages]]
 - [[./packages/language-reference/lexical-analysis.org][Lexical Analysis]]

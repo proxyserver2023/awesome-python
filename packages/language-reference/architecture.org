@@ -1,3 +1,4 @@
+
 *** Generalized Compiler Architecture
 [[../../images/architecture/001.jpg]]
 

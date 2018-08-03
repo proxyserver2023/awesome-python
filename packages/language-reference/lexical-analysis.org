@@ -1,4 +1,4 @@
-*** line-structure
+*** Line Structure
 **** Encoding declarations - default =UTF-8=
 #+BEGIN_SRC python
 # -*- coding: <encoding-name> -*- 
@@ -23,3 +23,29 @@ month_names = ['Januari', 'Februari', 'Maart',      # These are the
 #+END_SRC
 
 **** Reserved Classes of Identifiers
+- =_*=
+  - Not imported by =from module import *=
+- =__*__=
+  - System Defined Names
+- =__*=
+  - class-private names.
+
+*** Literals
+**** String and Bytes Literals    
+#+BEGIN_SRC python
+stringliteral   ::= [stringprefix](shortstring | longstring)
+stringprefix    ::= "r"  | 
+	            "u"  | 
+		    "R"  | 
+		    "U"  | 
+		    "f"  | 
+		    "F"  |
+		    "fr" |
+		    "Fr" |
+		    "fR" |
+		    "FR"
+shortstring     ::= "'" shortstringitem* "'" | '"' shortstringitem* '"'
+longstring      ::= "'''" longstringitem* "'''" | '"""' longstringitem* '"""'
+
+
+#+END_SRC
