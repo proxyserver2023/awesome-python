@@ -64,7 +64,12 @@ python manage.py makemigrations <app_name>
 python manage.py makemigrate
 
 # to see the generated sql
+python manage.py sqlmigrate polls 0001
+#+END_SRC
 
+manage user
+#+BEGIN_SRC shell
+python manage.py createsuperuser
 #+END_SRC
 *** Quick Install
 1. check python is up and running
@@ -121,18 +126,6 @@ mysite/               ---------   => root
         admin/
             base_site.html
 #+END_EXAMPLE
-*** Model
-*** View
-*** Template
-*** Forms
-*** Development Process
-*** Admin
-*** Security
-*** Internationalization & Localization
-*** Performance & Optimization
-*** Geographic framework
-*** Common Web Application Tools
-*** Other Core Functionalities
 *** Misc
 **** Automatic Reloading of =runserver=
 The development server automatically reloads Python code for each request as needed. You don’t need to restart the server for code changes to take effect. However, some actions like adding files don’t trigger a restart, so you’ll have to restart the server in these cases.

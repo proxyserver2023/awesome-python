@@ -3,17 +3,39 @@
 #+EMAIL: alamin.ineedahelp@gmail.com
 #+STARTUP: overview indent inlineimages hideblocks
 #+DESCRIPTION: Quick Reference for this ever-forgetting mind.
-#+OPTIONS: toc:2          
 
+*** Table of Contents
+- [[#language-reference][Language Reference]]
+- [[#web-frameworks][Web Frameworks]]
+- Networking
+- Algorithms
+- Data Structures
+- Modules and Packages
+- Testing
+- Debugging
+- Networking
+- Functional Programming
+- Web Scraping
+- Job Scheduler
+- Internationalization
+- Documentation
+- Date & Time
+- Database drivers
+- Data Analysis
+- Data Validation
+- Data Visualization
+- Authentication
+- Caching
+- Concurrency & Paralellism
 *** Language Reference
-- [[./packages/architecture.org][Architecture]]
-- [[./packages/debugging.org][Debugging]]
-- [[./packages/testing.org][Testing]]
-- [[./packages/modules_and_packages.org][Modules and Packages]]
-- [[./packages/networking.org][Networking]]
-- [[./packages/file.org][File]]
-- [[./packages/data_structures][Data Structures]]
+:PROPERTIES:
+:CUSTOM_ID: language-reference
+:END:
+- Architecture
 *** Web Frameworks
+:PROPERTIES:
+:CUSTOM_ID: web-frameworks
+:END:
 - [[./packages/django.org][Django]]
 ** Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
