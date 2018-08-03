@@ -1,0 +1,5 @@
+*** Python Disadvantages
+1. can't thread primitives or kernel code(?)
+2. lacks user defined value types
+3. lacks third party tools and documentation of languages like Java and PHP.(?)
+4. lets you write variables that aren't declared and even accidentally overwrite a variable without erroring.
