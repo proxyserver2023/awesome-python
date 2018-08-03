@@ -31,13 +31,13 @@
 :CUSTOM_ID: language-reference
 :END:
 - File Extensions
-| .*  | desc                                  |
-|-----+---------------------------------------|
-| py  | normal extension for a py source file |
-| pyc | compiled bytecode                     |
-| pyd | windows dll file                      |
-| pyw | python script for windows             |
-| pyz | python script archive                 |
+| .ext | desc                                  |
+|------+---------------------------------------|
+| .py  | normal extension for a py source file |
+| .pyc | compiled bytecode                     |
+| .pyd | windows dll file                      |
+| .pyw | python script for windows             |
+| .pyz | python script archive                 |
 - [[./packages/modules_and_packages.org][Modules and Packages]]
 *** Web Frameworks
 :PROPERTIES:
