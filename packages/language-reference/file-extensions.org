@@ -3,6 +3,7 @@
 |------+---------------------------------------|
 | .py  | normal extension for a py source file |
 | .pyc | compiled bytecode                     |
+| .pyi | python interface                      |
 | .pyd | windows dll file                      |
 | .pyw | python script for windows             |
 | .pyz | python script archive                 |
