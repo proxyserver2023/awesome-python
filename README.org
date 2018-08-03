@@ -31,77 +31,21 @@
 :PROPERTIES:
 :CUSTOM_ID: language-reference
 :END:
-- [[./packages/architecture.org][Architecture]]
-- File Extensions
-  | .ext | description                           |
-  |------+---------------------------------------|
-  | .py  | normal extension for a py source file |
-  | .pyc | compiled bytecode                     |
-  | .pyd | windows dll file                      |
-  | .pyw | python script for windows             |
-  | .pyz | python script archive                 |
-- [[./packages/modules_and_packages.org][Modules and Packages]]
-- [[./packages/object_oriented_programming.org][Object Oriented Programming]]
-
+- [[./packages/language-reference/architecture.org][Architecture]]
+- [[./packages/language-reference/file-extensions.org][File Extensions]]
+- [[./packages/language-reference/modules_and_packages.org][Modules and Packages]]
+- [[./packages/language-reference/object_oriented_programming.org][Object Oriented Programming]]
 *** Web Frameworks
 :PROPERTIES:
 :CUSTOM_ID: web-frameworks
 :END:
-- [[./packages/django.org][Django]]
+- [[./packages/web-frameworks/django.org][Django]]
 *** Standard Libraries
 :PROPERTIES:
 :CUSTOM_ID: standard-libraries
 :END:
-- os
-  #+BEGIN_SRC python
-  """
-  os.name    -> `posix` or `nt`
-  os.curdir  -> .
-  os.pardir  -> ..
-  os.sep     -> '/' or '\'
-  os.linesep -> '\r' or '\n' or '\r\n'
-  os.devnull -> '/dev/null', etc
-  """
-  #+END_SRC
-- sys
-  #+BEGIN_SRC python
-    """
-    --- Dynamic Objects ---
-    argv -- command line args
-    path -- module search path
-    path[0] -- script directory else ''
-    modules -- dictionary of loaded modules
-
-    stdin -- standard input file obj; used by input()
-    stdout -- standard output file obj; used by print()
-    stderr -- standard error obj; used for error messages
-
-    last_type -- type of last uncaught exception
-    last_value -- value of last uncaught exception
-    last_traceback -- traceback of last uncaught exception
-
-    --- Static Objects ---
-    builtin_module_names -- tuple of module names built into this interpreter
-    exec_prefix -- prefix used to find the machine-specific Python library
-    executable -- absolute path of the executable binary of the Python interpreter.
-
-    --- functions ---
-    exit() -- exit the interpreter by raising SystemExit
-    """
-  #+END_SRC
-  Command Line Args for following command
-  #+BEGIN_SRC shell
-  python foo.py bar -c qux --h
-  #+END_SRC
-  #+BEGIN_SRC python
-    """
-    sys.argv[0] => script_name => foo.py
-    sys.argv[1] => first_arg   => bar
-    sys.argv[2] => second_arg  => -c
-    sys.argv[3] => third_arg   => qux
-    sys.argv[4] => fourth_arg  => --h
-    """
-  #+END_SRC
+- [[./packages/standard-libraries/os.org][os]]
+- [[./packages/standard-libraries/sys.org][sys]]
 ** Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
 ** Versioning

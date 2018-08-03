@@ -1,0 +1,11 @@
+*** =os= package
+#+BEGIN_SRC python
+  """
+  os.name    -> `posix` or `nt`
+  os.curdir  -> .
+  os.pardir  -> ..
+  os.sep     -> '/' or '\'
+  os.linesep -> '\r' or '\n' or '\r\n'
+  os.devnull -> '/dev/null', etc
+  """
+#+END_SRC
