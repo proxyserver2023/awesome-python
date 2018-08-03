@@ -1,0 +1,25 @@
+*** Installing Packages
+#+BEGIN_SRC shell
+python -m pip install <package-name>
+python -m pip install package-name==1.0.4 # specific version   
+python -m pip install package-name>=1.0.4 # minimum version
+
+# upgrade package
+python -m pip install --upgrade <package-name>
+
+# install specifically for the user
+python -m pip install --user <package-name>
+#+END_SRC
+
+Installing packages for multiple versions
+#+BEGIN_SRC shell
+python2 -m pip install <package-name>   # default 2
+python2.7 -m pip install <package-name> # default 2.7
+python3 -m pip install <package-name>   # default 3
+python3.4 -m pip install <package-name> # default 3.4
+#+END_SRC
+
+*Issue*: =pip= not installed fix
+#+BEGIN_SRC shell
+python -m ensurepip --default-pip
+#+END_SRC
