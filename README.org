@@ -34,7 +34,10 @@
 - [[./packages/language-reference/architecture.org][Architecture]]
 - [[./packages/language-reference/file-extensions.org][File Extensions]]
 - [[./packages/language-reference/modules_and_packages.org][Modules and Packages]]
+- [[./packages/language-reference/list.org][List]]
 - [[./packages/language-reference/object_oriented_programming.org][Object Oriented Programming]]
+- [[./packages/language-reference/strings.org][Strings]]
+
 *** Web Frameworks
 :PROPERTIES:
 :CUSTOM_ID: web-frameworks

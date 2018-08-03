@@ -1,5 +1,5 @@
 *** Generalized Compiler Architecture
-[[../images/architecture/001.jpg]]
+[[../../images/architecture/001.jpg]]
 
 - lexing - the lexer breaks the line of code into tokens.
 - parsing - the parser uses these tokens to generate a structure, here an AST to depict the relationship between these tokens.
