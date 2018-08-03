@@ -1,0 +1,25 @@
+*** line-structure
+**** Encoding declarations - default =UTF-8=
+#+BEGIN_SRC python
+# -*- coding: <encoding-name> -*- 
+#+END_SRC
+
+**** Explicit Line Joining
+#+BEGIN_SRC python
+if 1900 < year < 2100 and 1 <= month <= 12 \
+   and 1 <= day <= 31 and 0 <= hour < 24 \
+   and 0 <= minute < 60 and 0 <= second < 60:   # Looks like a valid date
+        return 1
+
+# A line ending in a backslash cannot carry a comment.
+#+END_SRC
+
+**** Implicit Line Ending
+#+BEGIN_SRC python
+month_names = ['Januari', 'Februari', 'Maart',      # These are the
+               'April',   'Mei',      'Juni',       # Dutch names
+               'Juli',    'Augustus', 'September',  # for the months
+               'Oktober', 'November', 'December']   # of the year
+#+END_SRC
+
+**** Reserved Classes of Identifiers
