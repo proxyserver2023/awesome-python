@@ -31,7 +31,7 @@
 :CUSTOM_ID: language-reference
 :END:
 - Architecture
-- Modules and Packages
+- [[./packages/modules_and_packages.org][Modules and Packages]]
 *** Web Frameworks
 :PROPERTIES:
 :CUSTOM_ID: web-frameworks
