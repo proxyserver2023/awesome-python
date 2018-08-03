@@ -1,0 +1,2 @@
+*** Namespace and Scopes
+[[./images/namespace-and-scopes.org]]
