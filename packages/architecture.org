@@ -1,0 +1,7 @@
+*** Generalized Compiler Architecture
+| Name        | From             | To                         |
+|-------------+------------------+----------------------------|
+| Parser      | source code      | abstract syntax tree [ast] |
+| Compiler    | ast              | python byte code           |
+| Interpreter | python byte code | execute line by line       |
+[[../images/architecture/001.jpg]]

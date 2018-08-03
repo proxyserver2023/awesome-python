@@ -30,6 +30,7 @@
 :PROPERTIES:
 :CUSTOM_ID: language-reference
 :END:
+- [[./packages/architecture.org][Architecture]]
 - File Extensions
 | .ext | description                           |
 |------+---------------------------------------|
