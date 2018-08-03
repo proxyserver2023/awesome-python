@@ -1,0 +1,63 @@
+*** =csv= package
+
+Import CSV
+#+BEGIN_SRC python
+import csv
+#+END_SRC
+
+Reader
+#+BEGIN_SRC python
+  """
+  csv.reader(<csv_file_name>, dialect='excel', **fmtparams)
+  """
+  import csv
+  with open('./examples/eggs.csv', newline='') as csvfile:
+      spamreader = csv.reader('foo.csv',
+			      delimeter=' ',
+			      quotechar='|')
+      for row in spamreader:
+	  print(', '.join(row))
+
+"""
+1, This is Awesome, lovin every moment of it, 2
+2, This is Awesome, lovin every moment of it, 3
+"""
+#+END_SRC
+
+#+BEGIN_SRC python
+import csv
+
+# writing a csv file
+with open("data.csv", "w+") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["Col 1", "Col 2"])
+    writer.writerow(["Data 1", "Data 2"])
+
+
+# reading
+with open("data.csv", "r") as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+        print(row)
+
+
+# append
+with open("data.csv", "a") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["Data 3", "Data 4"])
+
+
+# dictionary csv reader
+with open("data.csv", "r") as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        print(row)
+
+
+# dictionary csv writer
+with open("data.csv", "a") as csvfile:
+    fieldnames = ["id", "title"]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writerow({"id": 123, "title": "New title"})
+#+END_SRC
+

@@ -49,6 +49,8 @@
 :END:
 - [[./packages/standard-libraries/os.org][os]]
 - [[./packages/standard-libraries/sys.org][sys]]
+- [[./packages/standard-libraries/csv.org][csv]]
+
 ** Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
 ** Versioning
