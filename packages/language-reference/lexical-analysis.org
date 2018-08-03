@@ -79,4 +79,4 @@ octdigit     ::=  "0"..."7"
 hexdigit     ::=  digit | "a"..."f" | "A"..."F"
 #+END_SRC
 *** Standard Type Hierarchy
-[[https://flylib.com/books/2/725/1/html/2/files/lpy2_0703.gif]]
+[[./images/data-model.png]]
