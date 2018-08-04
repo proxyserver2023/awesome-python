@@ -1,0 +1,7 @@
+Django==2.1
+django-analytical==2.4.0
+django-analytics==0.0.1
+django-geckoboard==2.0.0
+pycrypto==2.6.1
+pytz==2018.5
+six==1.11.0
