@@ -7,6 +7,8 @@
 *** Table of Contents
 - [[#language-reference][Language Reference]]
 - [[#web-frameworks][Web Frameworks]]
+- [[#standard-libraries][Standard Libraries]]
+- [[#documentation][Documentation]]
 - Networking
 - Algorithms
 - Data Structures
@@ -17,7 +19,6 @@
 - Web Scraping
 - Job Scheduler
 - Internationalization
-- Documentation
 - Date & Time
 - Database drivers
 - Data Analysis
@@ -26,7 +27,6 @@
 - Authentication
 - Caching
 - Concurrency & Paralellism
-- [[#standard-libraries][Standard Libraries]]
 *** Language Reference
 :PROPERTIES:
 :CUSTOM_ID: language-reference
@@ -60,9 +60,15 @@
 :CUSTOM_ID: standard-libraries
 :END:
 - [[./packages/standard-libraries/os.org][os]]
-- [[./packages/standard-libraries/sys.org][sys]]
 - [[./packages/standard-libraries/csv.org][csv]]
-
+- [[./packages/standard-libraries/functools.org][functools]]
+- [[./packages/standard-libraries/sys.org][sys]]
+- [[./examples/python-module-of-the-week.org][Python Module of The Week Examples]]
+*** Documentation
+:PROPERTIES:
+:CUSTOM_ID: documentation
+:END:
+- [[./packages/documentation/readme.org][documentation guide]]
 ** Contributing
 Please read [[./CONTRIBUTING.md][CONTRIBUTING.md]] for details on our code of conduct, and the process for submitting pull requests to us.
 ** Versioning
