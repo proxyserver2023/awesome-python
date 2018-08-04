@@ -40,12 +40,14 @@ The Web Framework for perfectionists with deadlines
   - [[#Unicode in Django][Unicode in Django]]
 - [[#Misc][Misc]]
 
-*** CheatSheet
-create project
+*** Commands
+create project, user and app
 #+BEGIN_SRC shell
 django-admin startproject <project_name>
 #or to create project inside the same directory
 django-admin startproject <project_name> . 
+python manage.py createsuperuser
+python manage.py startapp myapp
 #+END_SRC
 
 runserver
@@ -65,11 +67,34 @@ python manage.py makemigrate
 
 # to see the generated sql
 python manage.py sqlmigrate polls 0001
+python manage.py squashmigrations myapp 0004
 #+END_SRC
 
-manage user
+db backup and restore
 #+BEGIN_SRC shell
-python manage.py createsuperuser
+python manage.py dumpdata --indent 2 --exclude auth.permission --exclude contenttypes > db.json
+python manage.py loaddata db.json
+#+END_SRC
+
+sqlite3
+#+BEGIN_SRC shell
+sqlite3 db.sqlite3
+sqlite> .tables
+#+END_SRC
+
+test
+#+BEGIN_SRC python
+from django.test.utils import setup_test_environment
+setup_test_environment()
+#+END_SRC
+#+BEGIN_SRC shell
+python manage.py test myapp
+#+END_SRC
+
+distribution
+#+BEGIN_SRC shell
+python setup.py sdist
+pip install django-package-0.1.tar.gz
 #+END_SRC
 *** Quick Install
 1. check python is up and running
