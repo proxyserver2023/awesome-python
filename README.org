@@ -46,6 +46,8 @@
 - [[./packages/language-reference/exceptions.org][Exceptions]]
 - [[./packages/language-reference/comparisons.org][Comparisons]]
 - [[./packages/language-reference/operations.org][Operations]]
+- [[./packages/language-reference/bound-and-unbound-methods.org][Bound and Unbound Methods]]
+- [[./packages/language-reference/metaclass.org][Metaclass]]
 - Context Managers
 - Generators
 - Decorators
