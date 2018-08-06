@@ -96,6 +96,28 @@ distribution
 python setup.py sdist
 pip install django-package-0.1.tar.gz
 #+END_SRC
+
+export =DJANGO_SETTINGS_MODULE=
+#+BEGIN_SRC shell
+export DJANGO_SETTINGS_MODULE = mysite.settings
+# or
+django-admin runserver --settings=mysite.settings
+#+END_SRC
+
+or on the server [mod_wsgi]
+#+BEGIN_SRC python
+import os
+os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
+#+END_SRC
+
+diffsettings
+#+BEGIN_SRC shell
+python manage.py diffsettings
+#+END_SRC
+*** Architecture
+1. Django settings loading
+   1. Load settings from =django/conf/global_settings.py=.
+   2. Load settings from the specified settings file, overriding the global settings as necessary.
 *** Quick Install
 1. check python is up and running
 #+BEGIN_SRC shell
