@@ -80,3 +80,93 @@ hexdigit     ::=  digit | "a"..."f" | "A"..."F"
 #+END_SRC
 *** Standard Type Hierarchy
 [[./images/data-model.png]]
+**** None
+- Truth Value : False
+- Single Value
+- Signify the absense of value.
+
+**** Not Implemented
+- Truth Value : True
+**** Ellipsis
+- Truth Value: True
+- =...= or =Ellipsis=
+- Single Value
+**** numbers.Number
+Immutable
+***** numbers.Integral
+- Integers(int)
+  - unlimited range
+  - depends on virtual memory
+  - at the time of shifting and masking operations, a binary representation is asssumed.
+  - Neg numbers in 2's complement gives the illusion of infinite string of sign bit extending to the left.
+- Boolean(bool)
+
+***** numbers.Real
+- machine level double precision floating point numbers.
+- mercy of underlying machine architecture. [for range and handling overflow]
+- does not support single-precision floating point numbers. [if supported then ==>= savings in processor and memory usage]
+***** numbers.Complex
+- z.real and z.imag
+**** Sequences
+***** Immutable
+      - Strings
+	- sequence of values that represent =Unicode Code Points=.
+	- range =U+0000= to =U+10FFFF=.
+	- no =char= type. instead, every code-point is a string with length 1.
+	- =ord()= converts a code-point from its string from to an integer in the range =0 - 10FFFF=
+	- =chr()= converts an integer in the range =0 - 10FFFF= to the corresponding length 1 string object.
+	- =str.encode()= convert =str= to =bytes=
+	- =bytes.decode()= convert =bytes= to =str=
+      - Tuples
+	#+BEGIN_SRC python
+	empty_tuple = ()
+	singleton_tuple = (a,)
+	#+END_SRC
+      - Bytes
+	#+BEGIN_SRC python
+	"| 8 bit bytes | 8 bit bytes | 8 bit bytes|"
+	"8 bit bytes are represented by the integers; range 0<=x<256"
+	byte_literals = b'abc'
+	"""
+	bytes(iterable_of_ints) -> bytes
+	 bytes(string, encoding[, errors]) -> bytes
+	 bytes(bytes_or_buffer) -> immutable copy of bytes_or_buffer
+	 bytes(int) -> bytes object of size given by the parameter initialized with null bytes
+	 bytes() -> empty bytes object
+
+	 Construct an immutable array of bytes from:
+	   - an iterable yielding integers in range(256)
+	   - a text string encoded using the specified encoding
+	   - any object implementing the buffer API.
+	   - an integer
+
+	"""
+	>>> bytes.decode(b'abc')
+	'abc'
+
+	#+END_SRC
+
+***** Mutable
+      - Lists
+      - Byte Arrays
+	- mutable and unhashable
+	- =bytearray()=
+	- same as immutable =bytes= object.
+      extension module =array= mutable sequence type, as does the =collections= module.
+**** Set Types
+     unordered, finite sets of unique and immutable objects.
+     Common Usages:
+     1. fast membership testing
+     2. removing duplicates from a sequence.
+     3. intersection, union, difference, symmetric difference.
+      
+     Types
+     1. Sets - Mutable
+     2. Frozen Sets - immutable and hashable
+
+**** Mappings
+***** Dictionaries
+      - Mutable Type is not acceptable as key. cause mutable types are compared by value rather than object identity.
+      - efficient implementation of dictionaries requires a key's hash value to remain constant.
+      - Numeric types used for keys obey the normal rules for numeric comparison: if two numbers compare equal (e.g., 1 and 1.0) then they can be used interchangeably to index the same dictionary entry.
+**** Callable Types
