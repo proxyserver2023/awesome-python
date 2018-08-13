@@ -14,4 +14,4 @@
 | Interpreter | python byte code | execute line by line       |
 
 * Components
-functions ⇒ classes ⇒ modules ⇒ packages
+  functions ⇒ classes ⇒ modules ⇒ packages
