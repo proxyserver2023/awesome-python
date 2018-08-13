@@ -3,7 +3,6 @@
 #+EMAIL: alamin.ineedahelp@gmail.com
 #+STARTUP: overview indent inlineimages hideblocks
 #+DESCRIPTION: Quick Reference for this ever-forgetting mind.
-
 *** Table of Contents
 - [[#language-reference][Language Reference]]
 - [[#web-frameworks][Web Frameworks]]
@@ -61,6 +60,78 @@
 :PROPERTIES:
 :CUSTOM_ID: standard-libraries
 :END:
+**** Built in functions
+#+BEGIN_SRC python
+abs()
+all()
+any()
+ascii()
+bin()
+bool()
+breakpoint() # drops you into the debugger at the call site. pdb.set_trace()
+bytearray()
+bytes()
+callable()
+chr()
+classmethod()
+compile()
+complex()
+delattr()
+dict()
+dir()
+divmod()
+enumerate()
+eval()
+exec()
+filter()
+float()
+format()
+fronzenset()
+getattr()
+globals()
+hasattr()
+hash()
+help()
+hex()
+id()
+input()
+int()
+isinstance()
+issubclass()
+iter()
+len()
+list()
+locals()
+map()
+max()
+memoryview()
+min()
+next()
+object()
+oct()
+open()
+ord()
+pow()
+print()
+property()
+range()
+repr()
+reversed()
+round()
+set()
+setattr()
+slice()
+sorted()
+staticmethod()
+str()
+sum()
+super()
+tuple()
+type()
+vars()
+zip()
+__import__()
+#+END_SRC
 - [[./packages/standard-libraries/os.org][os]]
 - [[./packages/standard-libraries/csv.org][csv]]
 - [[./packages/standard-libraries/functools.org][functools]]
