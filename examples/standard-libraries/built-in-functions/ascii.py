@@ -1,0 +1,2 @@
+def ascii(object):
+    pass
