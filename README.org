@@ -51,6 +51,7 @@
 - Generators
 - Decorators
 - Iterators
+- [[./language-reference/regular-expressions.org][Regular Expressions]]
 *** Web Frameworks
 :PROPERTIES:
 :CUSTOM_ID: web-frameworks
