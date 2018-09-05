@@ -1,0 +1,24 @@
+| character   | desc                                                 |
+|-------------+------------------------------------------------------|
+| =^=         | beginning of line                                    |
+| =$=         | end of line                                          |
+| =.=         | any character                                        |
+| =\s=        | whitespace character                                 |
+| =\S=        | non-whitespace character                             |
+| =*=         | {0 or more}                                          |
+| =*?=        | {0 or more non-greedy}                               |
+| =+=         | {1 or more}                                          |
+| =+?=        | {1 or more non-greedy}                               |
+| =?=         | {0 or one}                                           |
+| =??=        | {0 or one non-greedy}                                |
+| =[aeiou]=   | "a","e","i","o", "u"                                 |
+| =[a-z0-9]=  | A-Z 0-9 [alpha numeric]                              |
+| =[^A-Za-z]= | without alpha                                        |
+| =()=        | group                                                |
+| =\b=        | empty string, only at the start or end of a word.    |
+| =\B=        | empty string, but not at the start or end of a word. |
+| =\d=        | decimal digit. [0-9]                                 |
+| =\D=        | non-digit character [^0-9]                           |
+|-------------+------------------------------------------------------|
+
+

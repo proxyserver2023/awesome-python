@@ -1,0 +1,14 @@
+import logging, ,
+        cProfile,
+        string,
+        re
+
+"""
+1. A demo module
+2. Works Great
+"""
+def main():
+    """
+    Main Function Documentation
+    """
+    pass

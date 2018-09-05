@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f49a7ed4-582e-46fd-863a-c723145b9b7e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Backup/examples/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/debugging/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/django-orm/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/exceptions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/flask/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/iterators/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/notebooks/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/pymotw/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/python-sockets/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/regular-expressions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/reserved-classes-of-identifiers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/stack-overflow/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/built-in-functions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/collections/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/datetime/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/debugging-and-profiling/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/interprocess-communication-and-networking/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/interprocess-communication-and-networking/socket/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/json/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backup/examples/talks/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/CONTRIBUTING.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.org" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/README.org.back" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/architecture.org" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/architecture.org" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data-structures/arrays/delete-nth.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/DjangoAnalyticsDemo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/DjangoAnalyticsDemo/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/DjangoAnalyticsDemo/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/DjangoAnalyticsDemo/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/examples/DjangoAnalyticsDemo/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/DjangoAuthenticationDemo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/design-patterns/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/DjangoAuthenticationDemo/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/DjangoAuthenticationDemo/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/DjangoAuthenticationDemo/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/examples/DjangoAuthenticationDemo/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/basic-oop-with-super.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/dictionaries.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/echo-client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/echo-server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/eggs.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/exceptions/raise-an-exception.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/fibonacci-using-generators.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/get-base64-from-url.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/iterators/001.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/list-all-jpg-images.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/list-all-png-images.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/multi-threading-simple-example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/notebooks/LEGB.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/notebooks/ipython-basics.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/pymotw/functools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/examples/DjangoTemplate/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/python-module-of-the-week.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/simple_server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/stack-overflow/asking-the-user-for-input-until-they-give-a-valid-response.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/stack-overflow/cloning stdout and stderr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/stack-overflow/natural-sort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/stack-overflow/switch-between-two-frames-in-tkinter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/stack-overflow/unsupported-operand-types.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/abs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/all.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/any.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/ascii.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/bytearray.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/callable.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/chr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/complex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/dir.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/divmod.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/datetime/001.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/datetime/create-datetime-object.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/debugging-and-profiling/README.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/debugging-and-profiling/faulthandler.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/enumerate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/eval.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/json/convert-a-python-object-containing-all-the-legal-data-types.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/json/convert-different-python-objects-into-json-strings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/json/import-json.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/json/json-dumps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/json/json-loads.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/type-checking.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/architecture/001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/00010.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0008.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/Python-Modules-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/Python-packages-.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/module_structure.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/language-reference/data-model.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules_and_packages.org" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/modules_and_packages.org" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/documentation/readme.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/architecture.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/best-practices.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/bound-and-unbound-methods.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/built-in-functions.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/comparisons.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/cons.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/data-model.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/exceptions.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/file-extensions.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/images/built-in-functions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/images/comparisons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/images/data-model.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/images/namespace-and-scopes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/images/operations.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/lexical-analysis.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/list.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/modules_and_packages.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/namespace-and-scopes.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/object_oriented_programming.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/operations.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/language-reference/strings.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/standard-libraries/csv.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/standard-libraries/functools.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/standard-libraries/os.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/standard-libraries/sys.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/web-frameworks/django.org" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/performance/time-your-python-script.ipynb" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backup/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.org.back" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backup/README.org.back">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/README.org" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-2" />
+    <option name="y" value="-24" />
+    <option name="width" value="1370" />
+    <option name="height" value="794" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="awesome-python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="awesome-python" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Backup" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Run Main" type="PythonConfigurationType" factoryName="Python">
+      <module name="awesome-python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/awesome-python/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Backup/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f49a7ed4-582e-46fd-863a-c723145b9b7e" name="Default" comment="" />
+      <created>1535727632912</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535727632912</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-2" y="-24" width="1370" height="794" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18587361" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32919255" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Backup/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backup/README.org.back">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backup/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backup/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backup/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backup/README.org.back">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
