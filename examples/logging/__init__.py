@@ -21,4 +21,4 @@ __email__       = "alamin.ineedahelp@gmail.com"
 __status__      = "PRODUCTION"
 __docformat__   = "reStructuredText|MarkDown"
 
-from .logger import *
+from .logger import Logger
