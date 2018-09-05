@@ -2,141 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f49a7ed4-582e-46fd-863a-c723145b9b7e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Backup/examples/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/debugging/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/django-orm/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/exceptions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/flask/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/iterators/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/notebooks/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/pymotw/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/python-sockets/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/regular-expressions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/reserved-classes-of-identifiers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/stack-overflow/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/built-in-functions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/collections/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/datetime/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/debugging-and-profiling/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/interprocess-communication-and-networking/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/interprocess-communication-and-networking/socket/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/standard-libraries/json/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Backup/examples/talks/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/CONTRIBUTING.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.org" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/README.org.back" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/architecture.org" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/architecture.org" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data-structures/arrays/delete-nth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/DjangoAnalyticsDemo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/DjangoAnalyticsDemo/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/DjangoAnalyticsDemo/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/DjangoAnalyticsDemo/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/examples/DjangoAnalyticsDemo/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAnalyticsDemo/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/DjangoAuthenticationDemo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/design-patterns/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/DjangoAuthenticationDemo/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/DjangoAuthenticationDemo/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/DjangoAuthenticationDemo/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/examples/DjangoAuthenticationDemo/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DjangoAuthenticationDemo/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/basic-oop-with-super.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/dictionaries.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/echo-client.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/echo-server.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/eggs.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/exceptions/raise-an-exception.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/fibonacci-using-generators.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/get-base64-from-url.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/iterators/001.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/list-all-jpg-images.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/list-all-png-images.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/multi-threading-simple-example.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/notebooks/LEGB.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/notebooks/ipython-basics.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/pymotw/functools.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/examples/DjangoTemplate/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/python-module-of-the-week.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/simple_server.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/stack-overflow/asking-the-user-for-input-until-they-give-a-valid-response.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/stack-overflow/cloning stdout and stderr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/stack-overflow/natural-sort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/stack-overflow/switch-between-two-frames-in-tkinter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/stack-overflow/unsupported-operand-types.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/abs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/all.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/any.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/ascii.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/bytearray.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/callable.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/chr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/complex.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/dir.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/built-in-functions/divmod.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/datetime/001.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/datetime/create-datetime-object.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/debugging-and-profiling/README.rst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/debugging-and-profiling/faulthandler.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/enumerate.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/eval.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/json/convert-a-python-object-containing-all-the-legal-data-types.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/json/convert-different-python-objects-into-json-strings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/json/import-json.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/json/json-dumps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/standard-libraries/json/json-loads.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/type-checking.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/architecture/001.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/00010.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0008.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/0009.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/002.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/003.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/004.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/005.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/006.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/007.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/Python-Modules-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/Python-packages-.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/modules_and_packages/module_structure.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/language-reference/data-model.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules_and_packages.org" beforeDir="false" afterPath="$PROJECT_DIR$/Backup/modules_and_packages.org" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/documentation/readme.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/architecture.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/best-practices.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/bound-and-unbound-methods.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/built-in-functions.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/comparisons.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/cons.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/data-model.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/exceptions.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/file-extensions.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/images/built-in-functions.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/images/comparisons.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/images/data-model.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/images/namespace-and-scopes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/images/operations.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/lexical-analysis.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/list.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/modules_and_packages.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/namespace-and-scopes.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/object_oriented_programming.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/operations.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/language-reference/strings.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/standard-libraries/csv.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/standard-libraries/functools.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/standard-libraries/os.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/standard-libraries/sys.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/web-frameworks/django.org" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/performance/time-your-python-script.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGES.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -147,31 +16,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backup/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="138">
+                <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.org.back" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Backup/README.org.back">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+            <state relative-caret-position="13">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/logging/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="299">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logger.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/logging/logger.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="e#158#563#0" />
+                <element signature="e#589#789#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CHANGES.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CHANGES.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CONTRIBUTING.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MANIFEST.in" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/setup.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -192,13 +121,21 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/README.org" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/CHANGES.rst" />
+        <option value="$PROJECT_DIR$/CHANGES.md" />
+        <option value="$PROJECT_DIR$/CONTRIBUTING.md" />
+        <option value="$PROJECT_DIR$/LICENSE" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/awesome-python/__init__.py" />
+        <option value="$PROJECT_DIR$/examples/logging/__init__.py" />
+        <option value="$PROJECT_DIR$/examples/logging/logger.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
+    <option name="x" value="681" />
     <option name="y" value="-24" />
-    <option name="width" value="1370" />
+    <option name="width" value="687" />
     <option name="height" value="794" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -215,6 +152,17 @@
             <path>
               <item name="awesome-python" type="b2602c69:ProjectViewProjectNode" />
               <item name="awesome-python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="awesome-python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="awesome-python" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="awesome-python" type="b2602c69:ProjectViewProjectNode" />
+              <item name="awesome-python" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="logging" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -278,16 +226,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-24" width="1370" height="794" extended-state="0" />
+    <frame x="681" y="-24" width="687" height="794" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18587361" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3776435" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32919255" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32934132" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32934132" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32934132" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -337,14 +286,101 @@
     <entry file="file://$PROJECT_DIR$/Backup/README.org.back">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+          <caret line="60" column="12" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="224">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.github/PULL_REQUEST_TEMPLATE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.github/ISSUE_TEMPLATE.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AUTHORS">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGES.md">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MANIFEST.in">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/logging/logger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#158#563#0" />
+            <element signature="e#589#789#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="138">
+            <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
