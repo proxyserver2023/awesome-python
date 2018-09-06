@@ -1,0 +1,2 @@
+class LazyEvaluation(object):
+    pass
