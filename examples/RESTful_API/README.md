@@ -142,7 +142,7 @@
       },
       "assigned_user": {
        "id" : 42,
-       "name" : "Jim",
+       "name" : "Jim"
       }
     }
     

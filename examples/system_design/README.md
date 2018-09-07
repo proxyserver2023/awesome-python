@@ -135,7 +135,7 @@ To know if caching is a good design alternative, for example, you'll have to kno
 5. **Estimation**: back-of-the-envelope calculation
 6. **Availability and Reliability**: How things can fail in a distributed environment? How to design a system to cope with network failures? Do you understand `durability`.
 
-## Practicing Steps for desiging a system
+## Practicing Steps for designing a system
 1. Do mock design sessions
 2. work on an actual system.
 3. Do back-of-the-envelope calcualation and micro-benchmark them.
@@ -151,3 +151,53 @@ To know if caching is a good design alternative, for example, you'll have to kno
 6. There is one administrator.
 7. Transport cost is zero.
 8. The network is homogeneous.
+
+## Domain Name System
+![DNS](https://camo.githubusercontent.com/fae27d1291ed38dd120595d692eacd2505cd3a9c/687474703a2f2f692e696d6775722e636f6d2f494f794c6a34692e6a7067)
+
+## Content Delivery Network
+![CDN](https://camo.githubusercontent.com/853a8603651149c686bf3c504769fc594ff08849/687474703a2f2f692e696d6775722e636f6d2f683954417547492e6a7067)
+1. Push CDNs
+2. Pull CDNs
+
+## Load Balancer
+![Load Balancer](https://camo.githubusercontent.com/21caea3d7f67f451630012f657ae59a56709365c/687474703a2f2f692e696d6775722e636f6d2f6838316e39694b2e706e67)
+
+Load Balancers are effective at:
+1. Preventing requests from going to unhealthy servers.
+2. Preventing overloading resources.
+3. Helping eliminate single points of failure.
+
+Can be implemented with Hardware[Expensive] or with software such as HAProxy.
+
+Additional Benefits:
+1. **SSL Termination**: Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations.
+    1. Removes the need to install X.509 certificates on each server.
+2. **Session Persistence**: Issue cookies and route a specific client's requests to same instance if the web apps do not keep track of sessions.
+
+**Multiple Load Balancers**: Active-passive, active-active
+
+### Horizontal Scaling
+**Disadvantages**:
+1. Sessions can be stored in a centralized data store such as database(SQL, NoSQL) or a persistent cache(Redis, Memcached)
+2. **Downstream** servers such as caches and databases need to handle more simultaneous connections as upstream servers scale out
+
+## Reverse Proxy (Web Server)
+![Reverse Proxy](https://camo.githubusercontent.com/e88216d0999853426f72b28e41223f43977d22b7/687474703a2f2f692e696d6775722e636f6d2f6e3431417a66662e706e67)
+
+**Benefits**:
+1. Hide information about backend servers, blacklist IPs, limit number of connections per client
+2. Clients only see the reverse proxy's IP, allowing you to scale servers or change their configuration
+3. Decrypt incoming requests and encrypt server responses so backend servers do not have to perform these potentially expensive operations
+    1. Removes the need to install X.509 certificates on each server
+4. **Compress** Server Responses
+5. Return the response for cached requests
+6. Serve static content directly
+    - HTML/CSS/JS
+    - Photos
+    - Videos
+    - etc.
+
+### Load Balancers Vs Reverse Proxy
+1. Use Load Balance to balance requests between multiple servers
+2. Use Reverse Proxy to Abstract the Implementation from Definition. It works like the public face of the website.
