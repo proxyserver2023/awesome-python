@@ -1,8 +1,5 @@
 import time
 
-from .Redis import Redis
-
-
 ONE_WEEK_IN_SECONDS = 7 * 86400
 VOTE_SCORE = 432
 
@@ -78,3 +75,24 @@ def get_group_articles(conn,
         conn.expire(key, 60)
 
     return get_articles(conn, page, key)
+
+
+from flask import Flask
+from .Redis import Redis
+
+
+app = Flask(__name__)
+redis = Redis(host='redis').conn
+
+
+@app.route('/')
+def hello():
+    redis.incr('hits')
+    return 'Hello World! I have been seen %s times.' % redis.get('hits')
+
+
+if __name__ == "__main__":
+    app.run(
+        host="0.0.0.0",
+        debug=True
+    )
