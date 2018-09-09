@@ -223,3 +223,40 @@ However it is possible that sometimes the list is empty and there is nothing to 
 
 ```
 It means "wait for elements in the list tasks, but return if after 5 seconds no element is available."
+
+### Redis Hash
+```bash
+> hmset user:1000 username antirez birthyear 1977 verified 1
+OK
+> hget user:1000 username
+"antirez"
+> hget user:1000 birthyear
+"1977"
+> hgetall user:1000
+1) "username"
+2) "antirez"
+3) "birthyear"
+4) "1977"
+5) "verified"
+6) "1"
+```
+
+### Redis Sets
+
+```bash
+> sadd myset 1 2 3
+(integer) 3
+> smembers myset
+1. 3
+2. 1
+3. 2
+
+> sismember myset 3
+(integer) 1
+> sismember myset 30
+(integer) 0
+
+> sadd news:1000:tags 1 2 5 77
+(integer) 4
+
+```
