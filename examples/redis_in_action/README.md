@@ -31,6 +31,11 @@ redis 127.0.0.1:6379> get mykey
 "somevalue"
 ```
 
+Install Redis client
+```bash
+pip install redis hiredis
+```
+
 ### Components of Redis
 1. `redis-server` is the Redis Server itself.
 2. `redis-sentinel` is the Redis Sentinel executable (monitoring and failover).
@@ -258,5 +263,4 @@ OK
 
 > sadd news:1000:tags 1 2 5 77
 (integer) 4
-
 ```
