@@ -250,7 +250,19 @@ Five things every API must have
     2. 201 Created
     3. 204 No Content
 3. 3XX Series - Redirect
-    1. 304 Not Modified
+    1. `300 - Multiple Choices`
+    ![300 Multiple Choices](https://img.webnots.com/2013/07/300-Multiple-Choices.png)
+    2. `301 - Resource moved permanently`
+    Most of the popular search engine crawlers and user agents follow up to 5 redirects for a single URL. More than 5 redirects will results in an infinite loop and the browsers like Chrome will show a message like “Too Many Redirects”.
+    ![Too many Redirects!](https://img.webnots.com/2013/07/Infinite-Redirect-Loop.png)
+    3. `302 - Resource moved temporarily`
+    4. `303 - See Another Resource`
+    ![303 See another resource](https://img.webnots.com/2013/07/303-See-Another-Resource.png)
+    5. `304 - Not Modified`
+    6. `305 - Use Proxy`
+    The proxy server address is also received in the response which will be displayed in the browser window.
+    Only HTTP/1.1 protocol uses 305 status code.
+    7. `307 - temporary redirection`
 4. 4XX Series - Client Error
     1. `400 Bad Request`
     2. `401 Unauthorized`
