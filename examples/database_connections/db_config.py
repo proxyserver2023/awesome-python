@@ -5,7 +5,7 @@ class DB:
     __connection = None
     __cursor = None
 
-    def __init__(self, database):
+    def __init__(self, database=config.DATABASE):
         self.__connection = self.get_connection(database)
         self.__cursor = self.__connection.cursor()
 
@@ -32,9 +32,29 @@ class DB:
 
         return __db
 
-    def query(self, query, params):
+    def query(self, query, params=None):
         self.__cursor.execute(query, params)
         return self.__cursor
 
     def close(self):
         self.__connection.close()
+
+
+# Examples
+if __name__ == "__main__":
+
+    class UserDAO(object):
+        __db = None
+
+        def __init__(self):
+            self.__db = DB()
+
+        def get_users(self):
+            return self.__db.query(
+                f"""
+                SELECT * FROM `users`
+                """
+            ).fetchall()
+
+    user = UserDAO()
+    users = user.get_users()
