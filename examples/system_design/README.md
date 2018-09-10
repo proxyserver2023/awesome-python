@@ -192,9 +192,13 @@ Create index on `shortlink` and `created_at` to speed up lookups (log time inste
 
 Read 1MB from RAM takes 250us
 Read 1MB from SSD takes 1ms
-// HERE
 
 #### Scale The Design
+
+1. Benchmark/Load Test
+2. Profile for bottlenecks
+3. Address bottlenecks while evaluating alternatives and trade-offs.
+4. Repeat
 
 ### Example - Generate Image results Page of 30 Thumbnails
 #### Design 1 - Serial
