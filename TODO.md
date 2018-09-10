@@ -7,4 +7,4 @@
 7. System Design: Calculate per read-write content size
 8. General Scaling Patterns
 9. Traffic is not evenly distributed.
-10.
+10. Python Encoding and Decoding
