@@ -31,174 +31,6 @@ Draw it... Justify ideas
 3. Caching
 4. Database Sharding
 
-## Examples
-### Design PasteBin And URL Shortening Bit.ly
-#### Outline - Use Cases, Constraints and Assumptions
-##### Use Cases
-1. User enters a block of text and gets a randomly generate
-    1. Expiration - default is no expire but optionally can be set.
-2. User's enter a pastes URL and views the contents
-3. User is anonymous.
-4. Service Tracks analytics of pages.
-    - Monthly visit stats
-5. Service deletes expired pastes
-6. Service has high Availability.
-
-**Out of scope**:
-1. User registers for an account
-    1. User verifies email
-2. User logs into a registered account
-    1. User edits the document
-3. User can set visibility
-4. User can set the shortlink
-
-##### Constraints
-**State assumptions**:
-1. Traffic is not evenly distributed
-2. Following a short link should be fast
-3. Pastes are text only
-4. Page view analytics do not need to be realtime
-5. 10 million users
-6. 10 million paste writes per month
-7. 100 million paste reads per month
-8. 10:1 read to write ratio
-
-**Calculate Usage**:
-1. Size per paste
-    1. 1KB = `shortlink = 7 bytes`                    + 
-             `expiration_length_in_minutes = 4 bytes` +
-             `created_at = 5 bytes`                   +
-             `paste_path = 255 bytes` ~= 1.27 KB
-2. NEW Paste = 1.27 KB * 10M = 1.27 * 10^10 = 12.7 GB / month = 150 GB / YEAR = 450 GB / 3 YEAR
-    1. Shortlinks = 10M * 12 = 120 M / YEAR = 360 M / 3 Year
-    2. Mostly New Pastes
-3. 4 Paste writes per second on average.
-4. 40 Read requests per second on average. 
-
-#### High Level Design
-![high level design for an url shortening service](https://camo.githubusercontent.com/2e0371e591b8311e36f5f5fa6ae18711f252b1f8/687474703a2f2f692e696d6775722e636f6d2f424b73426e6d472e706e67)
-
-#### Design Core Components
-1. User enters a block of text and gets a randomly generated URL
-    1. CLIENT -> POST -> Web Server[ Reverse Proxy ]
-    2. WEB Server -> FORWARD -> Write API
-    3. The Write API server does the following:
-        1. Generates a unique URL
-           ```
-           def db_connection():
-               pass
-        
-     
-           def generate_unique_url():
-               def generate_random_url():
-                   return "DEMO12344String"
-               
-               flag = True       
-               while flag:
-        
-                   url = generate_random_url()
-                   
-                   check_is_url_unique_query = f"""
-                   SELECT * FROM url_table
-                   WHERE url={url}
-                   """
-       
-                   db = db_connection()   
-                    
-                   flag = True if db.query(check_is_url_unique_query) else False
-            
-                return url
-           ```
-        2. Saves to the SQL Database pastes table
-        3. Saves the paste data to the Object Store
-        4. Returns the URL
-        
-    The `pastes` table jcould have the following structure
-    ```sql
-    
-    shortlink char(7) NOT NULL
-    expiration_length_in_minutes int NOT NULL DEFAULT INF
-    created_at datetime NOT NULL
-    paste_path varchar(255) NOT NULL
-    PRIMARY_KEY(shortlink)
-    ```
-
-    REST API
-    ```bash
-    $ curl -X POST --data '{ "expiration_length_in_minutes": "60", \
-        "paste_contents": "Hello World!" }' https://pastebin.com/api/v1/paste
-    ```
-    Response
-    ```bash
-    {
-        "shortlink": "foobar"
-    }
-    ```
-
-2. Use Case - User enters a paste's url and views the contents
-    1. The Client sends a get paste request to the Web Server
-    2. The Web Server forwards the request to the READ API server
-    3. The Read API server does the following:
-        1. Checks the SQL Database for the generated URL
-            1. if url shortlink exists in SQL DB then fetch the paste contents from the Object Store
-            2. Else return an error message for the user.
-    REST API:
-    ```bash
-    $ curl https://pastebin.com/api/v1/paste?shortlink=foobar
-    ```
-    
-    RESPONSE:
-    ```bash
-    {
-       "paste_contents": "Hello World",
-       "created_at": "YYYY-MM-DD HH:MM:SS",
-       "expiration_length_in_minutes": "60"
-    }
-    ```
-    
-3. Use Case - user enters a paste's url and views the contents
-simply we could mapreduce the web server logs to generate hit counts.
-```python
-class HitCounts(MRJob=None):
-    def extract_url(self, line):
-        pass
-        
-    def extract_year_month(self, line):
-        pass
-        
-    def mapper(self, _, line):
-        """Parse each log line, extract and transform relevant lines.
-
-        Emit key value pairs of the form:
-
-        (2016-01, url0), 1
-        (2016-01, url0), 1
-        (2016-01, url1), 1
-        """
-        
-        url = self.extract_url(line)
-        period = self.extract_year_month(line)
-        yield (period, url), 1
-
-    def reducer(self, key, values):
-        yield key, sum(values)
-```
-4. Use Case: Service deletes expired pastes
-scan the db for all expired entries. and marked expired / deleted.
-
-
-
-Create index on `shortlink` and `created_at` to speed up lookups (log time instead of scanning the entire table) and to keep the data in memory.
-
-Read 1MB from RAM takes 250us
-Read 1MB from SSD takes 1ms
-
-#### Scale The Design
-
-1. Benchmark/Load Test
-2. Profile for bottlenecks
-3. Address bottlenecks while evaluating alternatives and trade-offs.
-4. Repeat
 
 ### Example - Generate Image results Page of 30 Thumbnails
 #### Design 1 - Serial
@@ -251,6 +83,8 @@ To know if caching is a good design alternative, for example, you'll have to kno
 2. Pull CDNs
 
 ## Load Balancer
+![Load Balancer Elephant](https://varchitectthoughts.files.wordpress.com/2016/07/gop_balancing_act23.jpg)
+
 ![Load Balancer](https://camo.githubusercontent.com/21caea3d7f67f451630012f657ae59a56709365c/687474703a2f2f692e696d6775722e636f6d2f6838316e39694b2e706e67)
 
 Load Balancers are effective at:
@@ -291,6 +125,233 @@ Additional Benefits:
 ### Load Balancers Vs Reverse Proxy
 1. Use Load Balance to balance requests between multiple servers
 2. Use Reverse Proxy to Abstract the Implementation from Definition. It works like the public face of the website.
+
+## Database
+![Scaling up to your first 10 million users](https://camo.githubusercontent.com/15a7553727e6da98d0de5e9ca3792f6d2b5e92d4/687474703a2f2f692e696d6775722e636f6d2f586b6d3543587a2e706e67)
+
+ACID - Atomicity, Consistency, Isolation, Durability.
+
+### Master-Slave Replication
+The master serves reads and writes, replicating writes to one or more slaves, which serve only reads. Slaves can also replicate to additional slaves in a tree-like fashion. If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.
+
+![Master Slave Database](https://camo.githubusercontent.com/6a097809b9690236258747d969b1d3e0d93bb8ca/687474703a2f2f692e696d6775722e636f6d2f4339696f47746e2e706e67)
+![Master Slave Database](https://camo.githubusercontent.com/6a097809b9690236258747d969b1d3e0d93bb8ca/687474703a2f2f692e696d6775722e636f6d2f4339696f47746e2e706e67)
+
+### Master-Master Replication
+![Master Master Replication](https://camo.githubusercontent.com/5862604b102ee97d85f86f89edda44bde85a5b7f/687474703a2f2f692e696d6775722e636f6d2f6b7241484c47672e706e67)
+
+**Disadvantages**:
+1. You'll need a load balancer or you'll need to make changes to your application logic to determine where to write.
+2. Most master-master systems are either loosely consistent (violating ACID) or have increased write latency due to synchronization.
+3. Conflict resolution comes more into play as more write nodes are added and as latency increases.
+
+**Disadvantages**: Replication
+1. There is a potential for loss of data if the master fails before any newly written data can be replicated to other nodes.
+2. Writes are replayed to the read replicas. If there are a lot of writes, the read replicas can get bogged down with replaying writes and can't do as many reads.
+3. The more read slaves, the more you have to replicate, which leads to greater replication lag.
+4. On some systems, writing to the master can spawn multiple threads to write in parallel, whereas read replicas only support writing sequentially with a single thread.
+5. Replication adds more hardware and additional complexity.
+
+### Federation
+// TODO
+### Sharding
+### Denormalization
+### SQL Tuning
+
+## Caching
+### Memcached
+1. very fast
+2. simple
+3. key-value (string->binary)
+4. Clients for most languages
+5. distributed
+6. not replicated - so 1/N chance for local access in cluster.
+
+## Scalability
+![Managing Overload](https://upload.wikimedia.org/wikipedia/en/3/31/Don%27t-overload-your-trailer.jpg)
+
+**General Recommendations**:
+1. Immutability as the default
+2. Referential Transparency (FP)
+3. Laziness
+4. Think about your data.
+    1. Different data need different gurantees.
+    
+**Scalability Tradeoffs**:
+![There is no free lunch](http://eddecosta.com/wp-content/uploads/2012/06/no-free-lunch.jpg)
+
+**Tradeoffs**
+1. Performance vs Scalability
+2. Latency vs Throughput
+3. Avaialability vs Consistency
+
+### Performancs vs Scalability
+1. If you have a performance problem, **your system is slow for a single user**.
+2. If you have a scalability problem, **your system is fast for a single user but slow under heavy load**.
+
+### Latency vs throughput
+1. **Latency**: time/(per operation).
+2. **Throughput**: (No of operations)/(per unit time).
+
+**Maximum Throughput** with **Acceptable Latency**.
+
+### Availability vs Consistency
+**Brewer's CAP Theorem**:
+![CAP Theorem](https://i.imgur.com/JcTQBmP.png)
+![Centralized System](https://i.imgur.com/NB9IcWr.png)
+![Distributed System](https://i.imgur.com/kK0dKH3.png)
+
+**Availability Patterns**:
+1. Fail-Over
+2. Replication
+    1. Master-Slave
+    2. Tree Replication
+    3. Master-Master
+    4. Buddy Replication
+    ![Buddy Replication](https://image.slidesharecdn.com/scalabilitypatterns20100510-100512004526-phpapp02/95/scalability-availability-stability-patterns-48-638.jpg?cb=1369533910)
+    ![Buddy Replication](http://www.mastertheboss.com/images/stories/jboss/4026_07_15.png)
+    
+    
+**Scalability Patterns**: State
+1. Partitioning
+2. HTTP Caching
+    Reverse Proxy
+    1. Varnish
+    2. Squid
+    3. rack-cache
+    4. Pound
+    5. Nginx
+    6. Apache mod_proxy
+    7. Traffic server
+    
+    Generate Static Content
+    Precompute content
+    1. Homegrown + cron or Quartz
+    2. Spring Batch
+    3. Gearman
+    4. Hadoop
+    5. Google Data Protocol
+    6. Amazon Elastic MapReduce
+3. RDBMS Sharding
+4. NoSQL - Not only SQL
+    1. Key-value databases
+    2. Column Databases
+    3. Document Databases
+    4. Graph Databases
+    5. Data Structure Databases.
+5. Distributed Caching
+6. Data Grids
+7. Concurrency
+
+**When is a RDBMS not good enough?**
+Scaling reads to a RDBMS is hard.
+Scaling writes to a RDBMS is impossible.
+
+**Who's ACID?**
+1. Relational DB (MySQL, Oracle, Postgres)
+2. Object DBs (Gemstone, db40)
+3. Clustering Products(Coherence, Teracotta)
+4. Most Caching Products(ehcache)
+
+**Who's BASE?**
+Distributed databases
+1. Cassandra
+2. Riak
+3. Voldemort
+4. Dynomite
+5. SimpleDB
+
+**NoSQL in the wild**
+1. Google: Bigtable
+2. Amazon: Dynamo
+3. Amazon: SimpleDB
+4. Yahoo: HBase
+5. Facebook: Cassandra
+6. LinkedIn: Voldemort
+
+**Types of NoSQL Stores**
+1. Key-value (voldemort, dynomite)
+2. Column (Cassandra, Vertica, Sybase IQ)
+3. Document (MongoDB, CouchDB)
+4. Graph (Neo4j AllegroGraph)
+5. Datastructure (Redis, Hazelcast)
+
+**Distributed Caching**
+1. write-through
+    ![write-through](https://i.imgur.com/His4l5H.png)
+2. write-behind
+    ![write-behind](https://i.imgur.com/6LRpVAi.png)
+3. eviction policies
+    1. TTL
+    2. Bounded FIFO
+    3. Boudned LIFO
+    4. Explicit Cache Invalidation
+4. replication
+5. peer-to-peer(P2P)
+
+### Concurrency
+1. Shared-state concurrency
+2. Message-passing concurrency
+3. Dataflow concurrency
+4. software transactional memory
+
+### Clones
+- every server contains exactly the same codebase and does not store any user related data, like sessions or profile pictures, on local disc or memory.
+- Sessions need to be stored in a centralized data store which is accessible to all your application servers. It can be external database or external persistent cache like Redis.
+- performance(external_persistent_cache) > performance(external_database)
+- data store does not reside on the application servers.
+
+### Database
+1. Path #1: Scaling Database (i.e. MySQL) `master-slave replication` read from slaves and write into master. and upgrade your master by adding RAM, RAM and more RAM. Sharding, denormalization and SQL tuning.
+
+2. Path #2:
+    1. Denormalize from the beginning and include no more Joins in any DB Query. You can stay with mysql and use it like a NoSQL DB. or you can switch to a better and easier to scale NoSQL DB like MongoDB or CouchDB. 
+    2. Joins will now need to be done in your application code. 
+    3. Although you introduce NoSQL, it will be slower unless you use cache.
+
+### Cache
+Cache means `memory based caching`, never `file-based-caching`. it makes auto-scaling and cloning your servers just a pain.
+
+2 Patterns of caching your data. An old one and a new one.
+1. Cached Databasae Queries
+    1. Whenever you do a query to your database, you store the result dataset in cache
+    2. A `hashed version` of your query is the cache key.
+    3. The main issue is expiration.
+2. Cached Objects
+    1. asynchronous processing possible! just imagine an army of worker servers who assemble your objects for you! The Application just consumes the latest cached object and nearly never touches the database anymore.
+    
+    Some ideas of objects to cache.
+    1. user sessions
+    2. fully rendered blog articles.
+    3. user<->friend relationsips.
+    4. activity streams.
+    
+    Redis is best for extra database-features like persistence and built-in data structures, like sets and lists.
+    
+    if you just need to cache. take Memcached, because it scales like a charm.
+
+### Asynchronism
+1. **Async #1**:
+    "bake the breads at night and sell them in the morning".
+    Doing time consuming work in advance and serving the finished work with a low request time.
+    1. Very often this paradigm is used to turn dynamic content into static content.  Pages of a website, maybe built with a massive framework or CMS, are pre-rendered and locally stored as static HTML files on every change.
+    2. Often these computing tasks are done on a regular basis, maybe by a script which is called every hour by a cronjob. This pre-computing of overall general data can extremely improve websites and web apps and makes them very scalable and performant.
+    
+    3. Just imagine the scalability of your website if the script would upload these pre-rendered HTML pages to AWS S3 or Cloudfront or another Content Delivery Network! Your website would be super responsive and could handle millions of visitors per hour!
+2. **Asyn #2**:
+    sometimes customers has special requests like a birthday cake with “Happy Birthday, Steve!” on it. The bakery can not foresee these kind of customer wishes, so it must start the task when the customer is in the bakery and tell him to come back at the next day.
+    
+    Workflow:
+    1. User comes to website ->
+    2. Starts very computing intensive task which would take several minutes to finish. ->
+    3. so the frontend sends a job onto a job queue ->
+    4. and immediately signals back to the user: your job is in work and please continue to browse.
+    5. The job queue is constantly checked by a bunch of workers for new jobs
+    6.  If there is a new job then the worker does the job and after some minutes sends a signal that the job was done.
+    7. The frontend, which constantly checks for new “job is done” - signals, sees that the job was done and informs the user about it.
+   
+   If you do something time-consuming, try to do it always asynchronously. 
+   
 
 ## Appendix
 ### Powers of Two Table
