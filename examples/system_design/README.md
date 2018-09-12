@@ -83,6 +83,8 @@ To know if caching is a good design alternative, for example, you'll have to kno
 2. Pull CDNs
 
 ## Load Balancer
+![Load Balancer Elephant](https://varchitectthoughts.files.wordpress.com/2016/07/gop_balancing_act23.jpg)
+
 ![Load Balancer](https://camo.githubusercontent.com/21caea3d7f67f451630012f657ae59a56709365c/687474703a2f2f692e696d6775722e636f6d2f6838316e39694b2e706e67)
 
 Load Balancers are effective at:
@@ -124,7 +126,175 @@ Additional Benefits:
 1. Use Load Balance to balance requests between multiple servers
 2. Use Reverse Proxy to Abstract the Implementation from Definition. It works like the public face of the website.
 
+## Database
+![Scaling up to your first 10 million users](https://camo.githubusercontent.com/15a7553727e6da98d0de5e9ca3792f6d2b5e92d4/687474703a2f2f692e696d6775722e636f6d2f586b6d3543587a2e706e67)
+
+ACID - Atomicity, Consistency, Isolation, Durability.
+
+### Master-Slave Replication
+The master serves reads and writes, replicating writes to one or more slaves, which serve only reads. Slaves can also replicate to additional slaves in a tree-like fashion. If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.
+
+![Master Slave Database](https://camo.githubusercontent.com/6a097809b9690236258747d969b1d3e0d93bb8ca/687474703a2f2f692e696d6775722e636f6d2f4339696f47746e2e706e67)
+![Master Slave Database](https://camo.githubusercontent.com/6a097809b9690236258747d969b1d3e0d93bb8ca/687474703a2f2f692e696d6775722e636f6d2f4339696f47746e2e706e67)
+
+### Master-Master Replication
+![Master Master Replication](https://camo.githubusercontent.com/5862604b102ee97d85f86f89edda44bde85a5b7f/687474703a2f2f692e696d6775722e636f6d2f6b7241484c47672e706e67)
+
+**Disadvantages**:
+1. You'll need a load balancer or you'll need to make changes to your application logic to determine where to write.
+2. Most master-master systems are either loosely consistent (violating ACID) or have increased write latency due to synchronization.
+3. Conflict resolution comes more into play as more write nodes are added and as latency increases.
+
+**Disadvantages**: Replication
+1. There is a potential for loss of data if the master fails before any newly written data can be replicated to other nodes.
+2. Writes are replayed to the read replicas. If there are a lot of writes, the read replicas can get bogged down with replaying writes and can't do as many reads.
+3. The more read slaves, the more you have to replicate, which leads to greater replication lag.
+4. On some systems, writing to the master can spawn multiple threads to write in parallel, whereas read replicas only support writing sequentially with a single thread.
+5. Replication adds more hardware and additional complexity.
+
+### Federation
+// TODO
+### Sharding
+### Denormalization
+### SQL Tuning
+
+## Caching
+### Memcached
+1. very fast
+2. simple
+3. key-value (string->binary)
+4. Clients for most languages
+5. distributed
+6. not replicated - so 1/N chance for local access in cluster.
+
 ## Scalability
+![Managing Overload](https://upload.wikimedia.org/wikipedia/en/3/31/Don%27t-overload-your-trailer.jpg)
+
+**General Recommendations**:
+1. Immutability as the default
+2. Referential Transparency (FP)
+3. Laziness
+4. Think about your data.
+    1. Different data need different gurantees.
+    
+**Scalability Tradeoffs**:
+![There is no free lunch](http://eddecosta.com/wp-content/uploads/2012/06/no-free-lunch.jpg)
+
+**Tradeoffs**
+1. Performance vs Scalability
+2. Latency vs Throughput
+3. Avaialability vs Consistency
+
+### Performancs vs Scalability
+1. If you have a performance problem, **your system is slow for a single user**.
+2. If you have a scalability problem, **your system is fast for a single user but slow under heavy load**.
+
+### Latency vs throughput
+1. **Latency**: time/(per operation).
+2. **Throughput**: (No of operations)/(per unit time).
+
+**Maximum Throughput** with **Acceptable Latency**.
+
+### Availability vs Consistency
+**Brewer's CAP Theorem**:
+![CAP Theorem](https://i.imgur.com/JcTQBmP.png)
+![Centralized System](https://i.imgur.com/NB9IcWr.png)
+![Distributed System](https://i.imgur.com/kK0dKH3.png)
+
+**Availability Patterns**:
+1. Fail-Over
+2. Replication
+    1. Master-Slave
+    2. Tree Replication
+    3. Master-Master
+    4. Buddy Replication
+    ![Buddy Replication](https://image.slidesharecdn.com/scalabilitypatterns20100510-100512004526-phpapp02/95/scalability-availability-stability-patterns-48-638.jpg?cb=1369533910)
+    ![Buddy Replication](http://www.mastertheboss.com/images/stories/jboss/4026_07_15.png)
+    
+    
+**Scalability Patterns**: State
+1. Partitioning
+2. HTTP Caching
+    Reverse Proxy
+    1. Varnish
+    2. Squid
+    3. rack-cache
+    4. Pound
+    5. Nginx
+    6. Apache mod_proxy
+    7. Traffic server
+    
+    Generate Static Content
+    Precompute content
+    1. Homegrown + cron or Quartz
+    2. Spring Batch
+    3. Gearman
+    4. Hadoop
+    5. Google Data Protocol
+    6. Amazon Elastic MapReduce
+3. RDBMS Sharding
+4. NoSQL - Not only SQL
+    1. Key-value databases
+    2. Column Databases
+    3. Document Databases
+    4. Graph Databases
+    5. Data Structure Databases.
+5. Distributed Caching
+6. Data Grids
+7. Concurrency
+
+**When is a RDBMS not good enough?**
+Scaling reads to a RDBMS is hard.
+Scaling writes to a RDBMS is impossible.
+
+**Who's ACID?**
+1. Relational DB (MySQL, Oracle, Postgres)
+2. Object DBs (Gemstone, db40)
+3. Clustering Products(Coherence, Teracotta)
+4. Most Caching Products(ehcache)
+
+**Who's BASE?**
+Distributed databases
+1. Cassandra
+2. Riak
+3. Voldemort
+4. Dynomite
+5. SimpleDB
+
+**NoSQL in the wild**
+1. Google: Bigtable
+2. Amazon: Dynamo
+3. Amazon: SimpleDB
+4. Yahoo: HBase
+5. Facebook: Cassandra
+6. LinkedIn: Voldemort
+
+**Types of NoSQL Stores**
+1. Key-value (voldemort, dynomite)
+2. Column (Cassandra, Vertica, Sybase IQ)
+3. Document (MongoDB, CouchDB)
+4. Graph (Neo4j AllegroGraph)
+5. Datastructure (Redis, Hazelcast)
+
+**Distributed Caching**
+1. write-through
+    ![write-through](https://i.imgur.com/His4l5H.png)
+2. write-behind
+    ![write-behind](https://i.imgur.com/6LRpVAi.png)
+3. eviction policies
+    1. TTL
+    2. Bounded FIFO
+    3. Boudned LIFO
+    4. Explicit Cache Invalidation
+4. replication
+5. peer-to-peer(P2P)
+
+### Concurrency
+1. Shared-state concurrency
+2. Message-passing concurrency
+3. Dataflow concurrency
+4. software transactional memory
+
 ### Clones
 - every server contains exactly the same codebase and does not store any user related data, like sessions or profile pictures, on local disc or memory.
 - Sessions need to be stored in a centralized data store which is accessible to all your application servers. It can be external database or external persistent cache like Redis.
@@ -185,14 +355,6 @@ Cache means `memory based caching`, never `file-based-caching`. it makes auto-sc
    
    
    
-
-## Performancs vs Scalability
-1. If you have a performance problem, your system is slow for a single user.
-2. If you have a scalability problem, your system is fast for a single user but slow under heavy load.
-
-## Latency vs throughput
-1. Latency is the time to perform some action or to produce some result.
-2. Throughput is the number of such actions or results per unit of time.
 
 ## Appendix
 ### Powers of Two Table
