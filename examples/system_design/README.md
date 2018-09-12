@@ -352,9 +352,6 @@ Cache means `memory based caching`, never `file-based-caching`. it makes auto-sc
    
    If you do something time-consuming, try to do it always asynchronously. 
    
-   
-   
-   
 
 ## Appendix
 ### Powers of Two Table
