@@ -1,4 +1,23 @@
-**Reserved Classes of Identifiers**:
+#### Naming
+1. Variables, functions, methods, packages, modules
+    - `lower_case_with_underscores`
+2. Classes and Exceptions
+    - `CapWords'
+3. Protected Methods and internal Functions
+    - `_single_leading_underscore(self, ...)`
+4. Private Methods
+    - `__double_leading_underscores(self, ...)`
+5. Constants
+    - `ALL_CAPS_WITH_UNDERSCORES`
+
+
+#### Module and Package importing Order
+1. System Imports
+2. Third-Party Imports
+3. Local Source Tree Imports
+
+
+#### Reserved Classes of Identifiers:
 1. `_*`
 Not imported by from module import *
 2. `__*__`
