@@ -28,7 +28,7 @@ this kind of arrangement is also included.
 *Where is the pattern used practically?
 
 *References:
-https://sourcemaking.com/design_patterns/builder
+https://sourcemaking.com/design-patterns-old/builder
 
 *TL;DR80
 Decouples the creation of a complex object and its representation.

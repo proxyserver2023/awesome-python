@@ -24,7 +24,7 @@ purposes.
 *References:
 http://ginstrom.com/scribbles/2007/10/08/design-patterns-python-style/
 https://fkromer.github.io/python-pattern-references/design/#factory-method
-https://sourcemaking.com/design_patterns/factory_method
+https://sourcemaking.com/design-patterns-old/factory_method
 *TL;DR80
 Creates objects without having to specify the exact class.
 """
