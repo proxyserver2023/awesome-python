@@ -1,2 +1,0 @@
-def ascii(object):
-    pass

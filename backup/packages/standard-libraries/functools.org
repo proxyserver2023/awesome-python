@@ -1,3 +1,0 @@
-*** functools
-**** purpose
-for higher order functions.

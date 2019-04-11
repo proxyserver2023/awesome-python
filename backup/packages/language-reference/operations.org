@@ -1,2 +1,0 @@
-*** Operations
-[[./images/operations.png]]
