@@ -1,6 +1,0 @@
-INFO:[2018-09-05-21:57:57]=>__main__:info demo
-WARNING:[2018-09-05-21:57:57]=>__main__:warning demo
-ERROR:[2018-09-05-21:57:57]=>__main__:error demo
-CRITICAL:[2018-09-05-21:57:57]=>__main__:critical demo
-ERROR:[2018-09-05-21:57:57]=>__main__:exception demo
-NoneType: None

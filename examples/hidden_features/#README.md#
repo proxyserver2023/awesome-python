@@ -1,8 +1,0 @@
-### List Comprehensions
-
-``` python
-foo = [x for x in xrange(10) if x % 2 == 0]
-```
-
-### Metaclasses
-A metaclass defines how a class behaves. A class is an instance of meta class.
