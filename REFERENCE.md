@@ -1,20 +1,23 @@
 #### Module and Package importing Order
+
 1. System Imports
 2. Third-Party Imports
 3. Local Source Tree Imports
 
-
 #### Reserved Classes of Identifiers:
+
 1. `_*`
-Not imported by from module import *
+   Not imported by from module import \*
 2. `__*__`
-System Defined Names
+   System Defined Names
 3. `__*`
-class-private names.
+   class-private names.
 
 **is vs ==**
+
 1. `==` checks for equality
 2. `is` checks for identity
+
 ```python
 a = [1,2,3]
 b = a
@@ -25,5 +28,4 @@ a == c # True
 a is c # False
 ```
 
-
-#### Best Practices in Dictionary ####
+#### Best Practices in Dictionary
