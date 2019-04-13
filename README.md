@@ -92,7 +92,7 @@ class Foo(metaclass=Meta):
 ## Running the tests
 
 ```bash
-python -m unittest discover -v
+pytest -ra
 ```
 
 ## Deployment
@@ -101,7 +101,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-- [unittest](https://docs.python.org/3/library/unittest.html) - builtins `unittest` framework is used.
+- [pytest](./examples/pytest)
 
 ## Contributing
 
