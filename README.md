@@ -28,12 +28,14 @@ Install `pip3`
 
 ```bash
 sudo apt-get install -y python3-pip
+sudo pip3 install --upgrade pip  
+pip3 --version
 ```
 
 Install `virtualenvwrapper`
 
 ```bash
-sudo pip3 install vitualenvwrapper
+sudo pip3 install virtualenvwrapper
 ```
 
 On your `.zshrc` or `.bashrc`
@@ -42,6 +44,9 @@ On your `.zshrc` or `.bashrc`
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
 source /usr/local/bin/virtualenvwrapper.sh
+
+# change `which python2.*` to pyhton3 if need
+# nano /usr/local/bin/virtualenvwrapper.sh
 ```
 
 ```bash
