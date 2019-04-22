@@ -5,8 +5,7 @@ import webbrowser
 def search(line):
     st = line.split('==')[0]
     query = (f"{st} github")
-    # print(query)
-    webbrowser.open(f"https://google.com/?q={query}")
+    webbrowser.open(f"https://google.com/search?q={query}")
 
 
 if __name__ == "__main__":
