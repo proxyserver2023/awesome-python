@@ -7,6 +7,11 @@ Codebase for excellent python project examples.
 - [Getting Started](#getting-started)
 - [Concepts](#concepts)
   - [Metaclass](#metaclass)
+  - [Importing Modules and Packages](#importing-modules-and-packages)
+- [Best Practices](#best-practices)
+- [References](#references)
+- [Resources](#resources)
+
 
 ## Getting Started
 
@@ -81,6 +86,10 @@ pip install -r requirements.txt
 
 ### Metaclass
 
+#### Why do we need metaclass?
+
+By default in `python3` a class is inherited from basetype `type`. At the time some default initialization takes place like `__call__()` and then `__new__()`, `__init__()`. If we want to override it we need to extend the base type `type` and create another class that would be our metaclass. and from then we will use that metaclass. Because we dont want to temper with the built-in features. 
+
 ```python
 class Meta(type):
     def __new__(cls, name, bases, dct):
@@ -94,10 +103,69 @@ class Foo(metaclass=Meta):
 # Foo.attr - 100
 ```
 
+### Importing Modules and Packages
+
+#### Module Search Path
+
+-  
+- 
+- 
+
+
+### [Best Practices](#best-practices)
+
+#### Naming
+
+- Variables, functions, methods, packages, modules
+  - `lower_case_with_underscores`
+- Classes and Exceptions
+  - `CapWords`
+- Protected methods and internal functions
+  - `_single_leading_underscore(self, ...)`
+- Private Methods
+  - `__double_leading_underscore(self, ...)`
+- Constants
+  - `ALL_CAPS_WITH_UNDERSCORES`
+
+#### Module and Package importing Order
+
+1. System Imports
+2. Third-Party Imports
+3. Local Source Tree Imports
+
+### [References](#references)
+
+#### Reserved Classes of Identifiers:
+
+1. `_*`
+   Not imported by from module import \*
+2. `__*__`
+   System Defined Names
+3. `__*`
+   class-private names.
+
+#### `is` vs `==`
+
+1. `==` checks for equality
+2. `is` checks for identity
+
+```python
+a = [1,2,3]
+b = a
+a == b  # contents of a and b are equal ? => True
+a is b # is a and b pointing to the same object => TRUE
+c = list(a)
+a == c # True
+a is c # False
+```
+
+### [Resources](#resources)
+
+
 ## Running the tests
 
 ```bash
-pytest -ra
+pytest -svv
 ```
 
 ## Deployment
