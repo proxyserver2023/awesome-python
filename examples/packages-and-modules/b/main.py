@@ -1,4 +1,4 @@
-import mod
+from a import mod
 
 print(mod.s)
 print(mod.a)
