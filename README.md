@@ -116,9 +116,9 @@ class Foo(metaclass=Meta):
 - 
 
 
-### [Best Practices](#best-practices)
+## Best Practices
 
-#### Naming
+### Naming
 
 - Variables, functions, methods, packages, modules
   - `lower_case_with_underscores`
@@ -131,21 +131,21 @@ class Foo(metaclass=Meta):
 - Constants
   - `ALL_CAPS_WITH_UNDERSCORES`
 
-#### Module and Package importing Order
+### Module and Package importing Order
 
 1. System Imports
 2. Third-Party Imports
 3. Local Source Tree Imports
 
-### [References](#references)
+## References
 
-#### Reserved Classes of Identifiers
+### Reserved Classes of Identifiers
 
 1. `_*` Not imported by from module import \*
 2. `__*__` System Defined Names
 3. `__*` class-private names.
 
-#### is vs equal
+### is vs equal
 
 1. `==` checks for equality
 2. `is` checks for identity
@@ -159,12 +159,12 @@ c = list(a)
 a == c # True
 a is c # False
 ```
-#### site packages vs dist packages
+### site packages vs dist packages
 
 - **site-packages** - installed by pip or python
 - **dist-packages** - installed by system's package-manager like `apt`.
  
-### [Resources](#resources)
+## Resources
 
 ## Running the tests
 
