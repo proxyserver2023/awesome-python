@@ -8,8 +8,12 @@ Codebase for excellent python project examples.
 - [Concepts](#concepts)
   - [Metaclass](#metaclass)
   - [Importing Modules and Packages](#importing-modules-and-packages)
+
 - [Best Practices](#best-practices)
 - [References](#references)
+  - [Reserved Classes of Identifiers](#Reserved-Classes-of-Identifiers)
+  - [is vs ==](#is-vs-equal)
+  - [site packages vs dist packages](#site-packages-vs-dist-packages)
 - [Resources](#resources)
 
 
@@ -135,16 +139,13 @@ class Foo(metaclass=Meta):
 
 ### [References](#references)
 
-#### Reserved Classes of Identifiers:
+#### Reserved Classes of Identifiers
 
-1. `_*`
-   Not imported by from module import \*
-2. `__*__`
-   System Defined Names
-3. `__*`
-   class-private names.
+1. `_*` Not imported by from module import \*
+2. `__*__` System Defined Names
+3. `__*` class-private names.
 
-#### `is` vs `==`
+#### is vs equal
 
 1. `==` checks for equality
 2. `is` checks for identity
@@ -158,9 +159,12 @@ c = list(a)
 a == c # True
 a is c # False
 ```
+#### site packages vs dist packages
 
+- **site-packages** - installed by pip or python
+- **dist-packages** - installed by system's package-manager like `apt`.
+ 
 ### [Resources](#resources)
-
 
 ## Running the tests
 
