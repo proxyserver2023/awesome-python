@@ -64,6 +64,90 @@ World
 
 we must need to `await` while we run a co-routine.
 
+two concepts -
+
+- **coroutine function** - `async def` function
+- **coroutine object** - object returned by calling a coroutine function.
+
+#### awaitables
+
+three main types -
+
+- coroutines
+
+```python
+import asyncio
+
+async def nested():
+    return 42
+
+async def main():
+    # Nothing happens if we just call "nested()".
+    # A coroutine object is created but not awaited,
+    # so it *won't run at all*.
+    nested()
+
+    # Let's do it differently now and await it:
+    print(await nested())  # will print "42".
+
+asyncio.run(main())
+```
+
+- tasks - Tasks are used to schedule coroutines concurrently.
+
+```
+"""
+When a coroutine is wrapped into a Task with functions like asyncio.create_task() the coroutine is automatically scheduled to run soon
+"""
+
+import asyncio
+
+async def nested():
+    return 42
+
+async def main():
+    # Schedule nested() to run soon concurrently
+    # with "main()".
+    task = asyncio.create_task(nested())
+
+    # "task" can now be used to cancel "nested()", or
+    # can simply be awaited to wait until it is complete:
+    await task
+
+asyncio.run(main())
+
+```
+
+- futures - A Future is a special low-level awaitable object that represents an eventual result of an asynchronous operation
+
+```python
+async def main():
+    await function_that_returns_a_future_object()
+
+```
+
+#### Sleeping
+
+```python
+import asyncio
+import datetime
+
+
+async def display_date():
+    loop = asyncio.get_running_loop()
+    end_time = loop.time() + 5.0
+    while True:
+        print(datetime.datetime.now())
+        print(loop.time())
+        if (loop.time() + 1.0) >= end_time:
+            break
+        await asyncio.sleep(1)
+
+
+asyncio.run(display_date())
+
+```
+
 ## Metaclass
 
 ### Why do we need metaclass?
