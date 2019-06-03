@@ -16,3 +16,13 @@ async def main():
 
 # run the main co-routine
 asyncio.run(main())
+
+
+"""
+Output
+--------------------
+Started at 15:50:44
+hello
+world
+Finished at 15:50:47
+"""
