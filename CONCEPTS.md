@@ -62,6 +62,8 @@ Hello
 World
 ```
 
+we must need to `await` while we run a co-routine.
+
 ## Metaclass
 
 ### Why do we need metaclass?
