@@ -160,24 +160,3 @@ aa[0] = 666
 print(aa) # [666, 2, 3]
 print(bb) # [666, 2, 3]
 ```
-
-## Best Practices
-
-### Naming
-
-- Variables, functions, methods, packages, modules
-  - `lower_case_with_underscores`
-- Classes and Exceptions
-  - `CapWords`
-- Protected methods and internal functions
-  - `_single_leading_underscore(self, ...)`
-- Private Methods
-  - `__double_leading_underscore(self, ...)`
-- Constants
-  - `ALL_CAPS_WITH_UNDERSCORES`
-
-## Module and Package importing Order
-
-1. System Imports
-2. Third-Party Imports
-3. Local Source Tree Imports
