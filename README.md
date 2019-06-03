@@ -11,6 +11,8 @@ Codebase for excellent python project examples.
   - [Symbol Table](./CONCEPTS.md#symbol-table)
     - [Variables in Python are referenced to objects](./CONCEPTS.md#variables-in-python-are-referenced-to-objects)
 - [Best Practices](./BEST-PRACTICES.md)
+  - [Naming](./BEST-PRACTICES.md#naming)
+  - [Module and Package importing Order](./BEST-PRACTICES.md#Module-and-Package-importing-Order)
 - [How To](./HOW-TO.md)
   - [Create A Virtual Environment](./HOW-TO.md#create-a-virtual-environment)
 - [References](./REFERENCES.md)
