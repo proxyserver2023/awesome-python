@@ -1,5 +1,67 @@
 # Concepts
 
+## Concurrency
+
+### asyncio
+
+asyncio is often a perfect fit for IO-bound and high-level structured network code.
+
+asyncio provides a set of high-level APIs to:
+
+- run Python coroutines concurrently and have full control over their execution;
+- perform network IO and IPC;
+- control subprocesses;
+- distribute tasks via queues;
+- synchronize concurrent code;
+
+Additionally, there are low-level APIs for library and framework developers to:
+
+- create and manage event loops, which provide asynchronous APIs for networking, running subprocesses, handling OS signals, etc;
+- implement efficient protocols using transports;
+- bridge callback-based libraries and code with async/await syntax.
+
+#### Coroutines
+
+if we don't await on coroutines then it throws runtime warning
+
+```python
+import asyncio
+
+
+async def main():
+    print('Hello')
+    asyncio.sleep(1)
+    print('World')
+
+asyncio.run(main())
+```
+
+```shell
+Hello
+examples/asyncio/coroutines/hello-world.py:6: RuntimeWarning: coroutine 'sleep' was never awaited
+  asyncio.sleep(1)
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+World
+```
+
+```python
+import asyncio
+
+
+async def main():
+    print('Hello')
+    await asyncio.sleep(1)
+    print('World')
+
+asyncio.run(main())
+```
+
+```shell
+Hello
+<1 Second>
+World
+```
+
 ## Metaclass
 
 ### Why do we need metaclass?
