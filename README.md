@@ -21,6 +21,7 @@ Codebase for excellent python project examples.
   - [site packages vs dist packages](./REFERENCES.md#site-packages-vs-dist-packages)
 - [Resources](./RESOURCES.md)
   - [Modules and Packages Importing](./RESOURCES.md#Modules-and-Packages-Importing)
+- [Snippets](./SNIPPETS.md)
 
 ## Contributing
 
