@@ -38,7 +38,7 @@ profession = "Engineer"
 affiliation = "BriteCore"
 message = (
     f"Hi {name}. "
-    f"You are a {profession}. "
+    f"You are a/an {profession}. "
     f"You work in {affiliation}."
 )
 print(message)

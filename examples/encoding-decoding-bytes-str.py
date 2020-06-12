@@ -25,7 +25,7 @@ if b == e:
     print('Encoded')
 
 
-g = 'Hello, চিন্তা করতেছি এখন থেকে গুগল ট্রান্সলেট বাদে আপনাকে ইউজ করব'
+g = 'হ্যালো ওয়ার্ল্ড'
 print(type(g))
 h = g.encode()
 print(h)
