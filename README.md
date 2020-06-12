@@ -25,7 +25,7 @@ Codebase for excellent python project examples.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
@@ -35,7 +35,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 - **Alamin Mahamud** - _Initial work_ - [alamin.rocks](https://alamin-rocks.herokuapp.com)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/alamin-mahamud/awesome-python/contributors) who participated in this project.
 
 ## License
 
